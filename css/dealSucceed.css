@@ -1,0 +1,13 @@
+.choice {
+    font-size: 12px;
+    margin: 20px 0;
+    display: flex;
+}
+.choice div {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+}
+.choice div input {
+    margin: 0 10px 0 0;
+}

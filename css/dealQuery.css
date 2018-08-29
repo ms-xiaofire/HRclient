@@ -1,0 +1,25 @@
+.capital-tab {
+    margin: 20px 0;
+}
+.capital-tab ul {
+    padding: 0;
+    font-size: 0;
+    text-align: center;
+    list-style: none;
+}
+.capital-tab ul li {
+    font-size: 12px;
+    display: inline-block;
+}
+.capital-tab ul li a {
+    padding: 10px 25px;
+}
+.query-time {
+    margin-left: 15px;
+}
+.query-time input{
+    background-color: #8e8e8e;
+    border: 1px solid #8e8e8e;
+    border-radius: 5px;
+    margin-left: 10px;
+}

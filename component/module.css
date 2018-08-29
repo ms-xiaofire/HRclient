@@ -1,0 +1,251 @@
+/*公共样式*/
+.green {
+    color: #009900!important;
+}
+.red {
+    color: red!important;
+}
+.orange {
+    color: orange!important;
+}
+.blue {
+    color: #3f51b5!important;
+}
+a {
+    text-decoration: none;
+}
+button:focus {
+    outline: none;
+}
+/*input的type为number时,取消右边上下箭头*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+body {
+    margin: 0;
+    position: relative;
+}
+/*公共样式 end*/
+
+/*顶部菜单*/
+.header {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-menu {
+    padding: 0;
+    list-style: none;
+}
+.header-menu li {
+    padding: 0 10px;
+    display: inline-block;
+}
+.header a:hover, .header a:focus {
+    color: #3f51b5;
+}
+.menu {
+    position: absolute;
+    background-color: #8e8e8e;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 53px;
+    display: none;
+}
+.menu li {
+    padding: 10px 30px 10px 10px;
+    cursor: pointer;
+}
+.menu li:hover {
+    color: #fff;
+    background-color: #1a1a1a;
+}
+#analyze {
+    left: 85px;
+}
+#deal {
+    left: 142px;
+}
+#tool {
+    left: 200px;
+}
+#help {
+    left: 255px;
+}
+/*顶部菜单 end*/
+
+/*表单数据*/
+.main {
+    padding: 0 10px;
+    overflow: hidden;
+}
+.nav {
+    font-size: 12px;
+}
+.nav ul {
+    padding: 0;
+    list-style: none;
+}
+.nav ul li {
+    padding: 0 10px;
+    display: inline-block;
+}
+.nav a:hover, .nav a:focus {
+    color: #3f51b5;
+}
+.tables {
+    padding: 10px;
+}
+.table {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+.table tbody tr td {
+    height: 30px;
+}
+.pagination ul {
+    padding: 0;
+    list-style: none;
+    float: right;
+    margin-right: 20px;
+}
+.pagination ul li {
+    padding: 0 20px;
+    display: inline-block;
+}
+.pagination a {
+    font-size: 12px;
+}
+.pagination a:hover, .pagination a:focus {
+    color: #3f51b5;
+}
+/*表单数据 end*/
+
+/*底部*/
+.exchange {
+    margin-bottom: 2px;
+    overflow: hidden;
+}
+.exchange ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.exchange ul li {
+    float: left;
+    display: inline-block;
+}
+.exchange a {
+    padding: 16px 10px;
+    font-size: 14px;
+    display: block;
+}
+.exchange a:hover, .exchange a:focus {
+    background-color: #626262;
+}
+.details {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.time {
+    padding-right: 10px;
+}
+.time span {
+    min-width: 65px;
+    margin: 0 15px;
+    font-size: 12px;
+    display: inline-block;
+}
+.signal {
+    width: 30px;
+}
+.timeClose {
+    width: 18px;
+    cursor: pointer;
+}
+/*底部 end*/
+
+/*弹出框*/
+.dim {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
+.pop-up {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    display: none;
+}
+.pop-up-box {
+    width: 400px;
+    min-height: 200px;
+    border-radius: 20px;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+.termSheet-title {
+    text-align: center;
+    padding: 20px 20px;
+}
+.termSheet-title span {
+    padding: 0 15px;
+    border-left: 2px solid blue;
+    font-size: 14px;
+    font-weight: bold;
+}
+.termSheet-title img {
+    width: 15px;
+    float: right;
+    cursor: pointer;
+}
+.termSheet-main {
+    padding: 0 20px 40px;
+    font-size: 12px;
+    color: #8e8e8e;
+}
+.about-title {
+    text-align: center;
+    padding: 20px 20px;
+}
+.about-title span {
+    padding: 0 15px;
+    border-left: 2px solid blue;
+    font-size: 14px;
+    font-weight: bold;
+}
+.about-title img {
+    width: 15px;
+    float: right;
+    cursor: pointer;
+}
+.about-main {
+    font-size: 12px;
+    text-align: center;
+}
+.about-main img {
+    width: 200px;
+    height: 100px;
+}
+.brand {
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+.versions {
+    padding: 20px 0 10px;
+}
+/*弹出框 end*/

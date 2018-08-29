@@ -1,0 +1,243 @@
+.user-message {
+    font-size: 12px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+.user-message div {
+    margin-right: 50px;
+}
+.footer-main {
+    padding: 2px 0 20px;
+    display: flex;
+}
+.deal-menu {
+    width: 10%;
+    padding: 20px 10px;
+    font-size: 12px;
+}
+.deal-menu a {
+    width: 100%;
+    line-height: 25px;
+    display: inline-block;
+}
+.deal-menu a:focus {
+    color: red!important;
+}
+.set-title {
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+.set-title img {
+    width: 16px;
+    float: right;
+    cursor: pointer;
+}
+.set-main {
+    margin-left: 40px;
+    font-size: 14px;
+}
+.set-main p {
+    color: #839fff;
+}
+.set-main div {
+    margin: 10px 0;
+}
+.set-btn {
+    text-align: center;
+    margin: 30px 0;
+}
+.set-btn button {
+    color: #fff;
+    padding: 10px 35px;
+    border: none;
+    border-radius: 25px;
+    background-color: #839fff;
+    cursor: pointer;
+}
+.deal-buy {
+    width: 20%;
+    font-size: 12px;
+    margin: 0 2px;
+}
+.buy-title {
+    padding: 10px;
+}
+.buy-price {
+    margin: 15px 0 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buy-price p {
+    margin: 0 8px;
+}
+.buy-price select {
+    width: 80px;
+    background-color: #8e8e8e;
+    border: 1px solid #8e8e8e;
+    border-radius: 5px;
+    margin-right: 23px;
+}
+.buy-price input {
+    width: 50px;
+    padding: 0 5px;
+    background-color: #8e8e8e;
+    border: 1px solid #8e8e8e;
+}
+.buy-operate {
+    text-align: center;
+    margin: 0 10px 0 5px;
+}
+.operate-num {
+    width: 45px;
+    height: 16px;
+    padding: 5px 10px;
+    border-bottom: 1px solid #8e8e8e;
+}
+.operate {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+}
+.operate-btn {
+    text-align: center;
+    margin: 20px 0;
+}
+.operate-btn button {
+    width: 70px;
+    color: #fff;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 15px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.check {
+    background-color: #839fff;
+}
+.reset {
+    background-color: #009688;
+}
+.deal-state {
+    width: 30px;
+    text-align: center;
+    margin: 0 2px;
+    font-size: 12px;
+}
+.deal-state div {
+    padding: 30px 5px;
+}
+.state-all {
+    color: #fff;
+    background-color: #5f6780;
+}
+.state-recall {
+    color: #fff;
+    background-color: #8a2d4c;
+}
+.deal-details {
+    flex: 1;
+    margin-left: 2px;
+}
+.details-btn {
+    margin: 5px 0 5px 2px;
+}
+.details-btn button {
+    min-width: 94px;
+    padding: 5px 20px;
+    color: #fff;
+    background-color: #009688;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.myTables {
+    font-size: 12px;
+}
+.myTable thead tr th {
+    color: #fff;
+    padding: 5px 0;
+    background-color: #393939;
+}
+.myTable tbody tr td {
+    height: auto;
+}
+.deal-recall {
+    margin: 2px 0;
+}
+.deal-recall button {
+    width: 94px;
+    padding: 5px 20px;
+    color: #fff;
+    background-color: #c65d61;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+/*买入*/
+.buyInput-title {
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+.buyInput-title img {
+    width: 15px;
+    float: right;
+    cursor: pointer;
+}
+.buyInput-main {
+    width: 60%;
+    margin: 0 auto;
+}
+.buyInput-main div {
+    font-size: 14px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.buyInput-main div p {
+    margin: 0;
+}
+.deal-OK {
+    padding: 15px 40px;
+    color: #fff;
+    font-size: 20px;
+    background-color: #839fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+/*买入 end*/
+/*全部平仓*/
+.allOut-title {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    overflow: hidden;
+}
+.allOut-main {
+    text-align: center;
+    font-size: 14px;
+    overflow: hidden;
+}
+.dealMain-btn {
+    text-align: center;
+    margin: 40px 0 20px;
+}
+.dealMain-btn button {
+    color: #fff;
+    padding: 10px 30px;
+    background-color: #839fff;
+    border: none;
+    border-radius: 20px;
+    margin: 0 30px;
+    cursor: pointer;
+}
+/*全部平仓 end*/

@@ -1,0 +1,17 @@
+.dealRule-label {
+    margin: 10px 0;
+}
+.dealRule-label p {
+    font-size: 12px;
+    margin: 0;
+}
+.auto-btn button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.again-btn button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
