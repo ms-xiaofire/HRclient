@@ -3,9 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>恒瑞国际</title>
-    <link rel="stylesheet" href="../../component/module.css">
-    <link rel="stylesheet" href="../../component/dealMain.css">
-    <link rel="stylesheet" href="../../css/dealQuery.css">
+    <link rel="stylesheet" href="../../../component/module.css">
+    <link rel="stylesheet" href="../../../component/dealMain.css">
+    <link rel="stylesheet" href="../../../css/dealQuery.css">
 </head>
 <body>
 <!--顶部菜单-->
@@ -375,7 +375,7 @@
 <footer class="bg-black">
     <div class="exchange bg-1a">
         <ul>
-            <li><a href="#" class="white">中金所CFFEX</a></li>
+            <li><a href="#" class="white exchange-bg">中金所CFFEX</a></li>
             <li><a href="#" class="white">纽约NYMEX</a></li>
             <li><a href="#" class="white">纽约COMEX</a></li>
             <li><a href="#" class="white">香港HKEx</a></li>
@@ -408,28 +408,28 @@
             </div>
         </div>
         <div class="time">
-            <img src="../../images/xinhao.png" class="signal">
+            <img src="../../../images/xinhao.png" class="signal">
             <span id="time" class="white"></span>
-            <img src="../../images/guanbi1.png" class="timeClose">
+            <img src="../../../images/guanbi1.png" class="timeClose">
         </div>
     </div>
     <div class="footer-main">
         <div class="deal-menu bg-1a">
-            <a href="../dealMain.html" class="white">交易</a>
+            <a href="../../dealMain.html" class="white">交易</a>
             <a href="../dealEntrust.html" class="white">当日委托</a>
             <a href="../dealSucceed.html" class="white">当日成交</a>
             <a href="../dealPossess.html" class="white">持仓</a>
             <a href="../dealRule.html" class="white">条件单</a>
-            <a href="queryCapital.html" class="white">资金流水查询</a>
+            <a href="/queryCapital.html" class="white red">资金流水查询</a>
             <a href="#" class="white" id="set">参数设置</a>
-            <a href="#" class="white">银期转账</a>
-            <a href="#" class="white">修改密码</a>
+            <a href="../dealTransfer.html" class="white">银期转账</a>
+            <a href="../dealPwd.html" class="white">修改密码</a>
         </div>
         <div class="deal-buy white">
             <div class="capital-tab">
                 <ul>
-                    <li><a href="queryCapital.html" class="white bg-1a">资金状况</a></li>
-                    <li><a href="queryDetail.html" class="white bg-1a">结算单</a></li>
+                    <li><a href="queryCapital.html" class="white bg-1a bg-query">资金状况</a></li>
+                    <li><a href="queryStatement.html" class="white bg-1a">结算单</a></li>
                     <li><a href="queryDetail.html" class="white bg-1a">持仓明细</a></li>
                 </ul>
             </div>
@@ -441,7 +441,46 @@
                 <button type="button">查询</button>
             </div>
         </div>
-        <div class="deal-details"></div>
+        <div class="deal-details">
+            <form>
+                <table class="table myTable white">
+                    <thead>
+                    <tr>
+                        <th>委托时间</th>
+                        <th>合约</th>
+                    </tr>
+                    </thead>
+                    <tbody class="bg-1a">
+                    <tr>
+                        <td>
+                            <span>20180730</span>
+                            <span>15:36:10</span>
+                        </td>
+                        <td>
+                            <div class="contract">
+                                <span>买入ES1809|小普标1809合约</span>
+                                <span>-1800.26</span>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tbody class="bg-1a">
+                    <tr>
+                        <td>
+                            <span>20180730</span>
+                            <span>15:30:00</span>
+                        </td>
+                        <td>
+                            <div class="contract">
+                                <span>买入ES1809|小普标1809合约</span>
+                                <span>+1800.26</span>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
     </div>
 </footer>
 <!--底部 end-->
@@ -453,7 +492,7 @@
     <div class="pop-up-box">
         <div class="set-title">
             <span>交易设置</span>
-            <img src="../../images/close.png" class="set-close">
+            <img src="../../../images/close.png" class="set-close">
         </div>
         <div class="set-main">
             <p>交易界面</p>
@@ -498,7 +537,7 @@
     <div class="pop-up-box">
         <div class="termSheet-title">
             <span>免责条款声明</span>
-            <img src="../../images/close.png" class="termSheet-close">
+            <img src="../../../images/close.png" class="termSheet-close">
         </div>
         <div class="termSheet-main">
             <div>测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
@@ -514,7 +553,7 @@
     <div class="pop-up-box">
         <div class="about-title">
             <span>关于我们</span>
-            <img src="../../images/close.png" class="about-close">
+            <img src="../../../images/close.png" class="about-close">
         </div>
         <div class="about-main">
             <img src="">
@@ -527,7 +566,7 @@
 </div>
 <!--关于 end-->
 <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-<script src="../../component/module.js"></script>
-<script src="../../component/dealMain.js"></script>
+<script src="../../../component/module.js"></script>
+<script src="../../../component/dealMain.js"></script>
 </body>
 </html>

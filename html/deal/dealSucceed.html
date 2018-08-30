@@ -3,8 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>恒瑞国际</title>
-    <link rel="stylesheet" href="../component/module.css">
-    <link rel="stylesheet" href="../component/dealMain.css">
+    <link rel="stylesheet" href="../../component/module.css">
+    <link rel="stylesheet" href="../../component/dealMain.css">
+    <link rel="stylesheet" href="../../css/dealSucceed.css">
 </head>
 <body>
 <!--顶部菜单-->
@@ -374,14 +375,14 @@
 <footer class="bg-black">
     <div class="exchange bg-1a">
         <ul>
-            <li><a href="dealMain.html" class="white exchange-bg">中金所CFFEX</a></li>
-            <li><a href="dealNYMEX.html" class="white">纽约NYMEX</a></li>
-            <li><a href="dealCOMEX.html" class="white">纽约COMEX</a></li>
-            <li><a href="dealHKEX.html" class="white">香港HKEx</a></li>
-            <li><a href="dealCBOT.html" class="white">芝加哥CBOT</a></li>
-            <li><a href="dealCME.html" class="white">芝加哥CME</a></li>
-            <li><a href="dealEUREX.html" class="white">瑞士EUREX</a></li>
-            <li><a href="dealOptional.html" class="white">自选</a></li>
+            <li><a href="#" class="white exchange-bg">中金所CFFEX</a></li>
+            <li><a href="#" class="white">纽约NYMEX</a></li>
+            <li><a href="#" class="white">纽约COMEX</a></li>
+            <li><a href="#" class="white">香港HKEx</a></li>
+            <li><a href="#" class="white">芝加哥CBOT</a></li>
+            <li><a href="#" class="white">芝加哥CME</a></li>
+            <li><a href="#" class="white">瑞士EUREX</a></li>
+            <li><a href="#" class="white">自选</a></li>
         </ul>
     </div>
     <div class="details bg-1a">
@@ -407,22 +408,22 @@
             </div>
         </div>
         <div class="time">
-            <img src="../images/xinhao.png" class="signal">
+            <img src="../../images/xinhao.png" class="signal">
             <span id="time" class="white"></span>
-            <img src="../images/guanbi1.png" class="timeClose">
+            <img src="../../images/guanbi1.png" class="timeClose">
         </div>
     </div>
     <div class="footer-main">
         <div class="deal-menu bg-1a">
-            <a href="dealMain.html" class="white red">交易</a>
-            <a href="deal/dealEntrust.html" class="white">当日委托</a>
-            <a href="deal/dealSucceed.html" class="white">当日成交</a>
-            <a href="deal/dealPossess.html" class="white">持仓</a>
-            <a href="deal/dealRule.html" class="white">条件单</a>
-            <a href="deal/dealQuery/queryCapital.html" class="white">资金流水查询</a>
+            <a href="../dealMain.html" class="white">交易</a>
+            <a href="dealEntrust.html" class="white">当日委托</a>
+            <a href="dealSucceed.html" class="white red">当日成交</a>
+            <a href="dealPossess.html" class="white">持仓</a>
+            <a href="dealRule.html" class="white">条件单</a>
+            <a href="dealQuery/queryCapital.html" class="white">资金流水查询</a>
             <a href="#" class="white" id="set">参数设置</a>
-            <a href="deal/dealTransfer.html" class="white">银期转账</a>
-            <a href="deal/dealPwd.html" class="white">修改密码</a>
+            <a href="dealTransfer.html" class="white">银期转账</a>
+            <a href="dealPwd.html" class="white">修改密码</a>
         </div>
         <div class="deal-buy white">
             <div class="buy-title bg-1a">三键下单</div>
@@ -474,102 +475,36 @@
                 <button type="button" class="reset">复位</button>
             </div>
         </div>
-        <div class="deal-state">
-            <div class="bg-1a white">持仓</div>
-            <div class="state-all">全部</div>
-            <div class="state-recall">可撤</div>
-        </div>
         <div class="deal-details">
-            <div class="details-btn">
-                <button type="button" id="allOut">全部平仓</button>
-                <button type="button" id="rapidOut">快捷平仓</button>
-                <button type="button" id="rapidBack">快捷反手</button>
-                <button type="button" id="rapidLock">快捷锁仓</button>
-                <button type="button" id="stopProfit">止盈止损</button>
+            <div class="choice white">
+                <div>
+                    <input type="checkbox">
+                    <span>总成交明细</span>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <span>按委托汇总</span>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <span>按合约汇总</span>
+                </div>
             </div>
             <div class="myTables white">
                 <form>
                     <table class="table myTable">
                         <thead>
                         <tr>
-                            <th>合约</th>
-                            <th>方向</th>
-                            <th>属性</th>
-                            <th>持仓</th>
-                            <th>可用</th>
-                            <th>开仓均价</th>
-                            <th>浮动盈亏</th>
-                            <th>止盈/数量</th>
-                            <th>止损/数量</th>
-                            <th>名称</th>
-                        </tr>
-                        </thead>
-                        <tbody class="bg-1a">
-                        <tr>
-                            <td>美原油</td>
-                            <td>买</td>
-                            <td>平</td>
-                            <td>20</td>
-                            <td>16</td>
-                            <td>1005.00</td>
-                            <td>1275.00</td>
-                            <td>600.78</td>
-                            <td>570.00</td>
-                            <td>1901</td>
-                        </tr>
-                        </tbody>
-                        <tbody class="bg-1a">
-                        <tr>
-                            <td>美原油</td>
-                            <td>卖</td>
-                            <td>平</td>
-                            <td>20</td>
-                            <td>16</td>
-                            <td>1005.00</td>
-                            <td>-200.00</td>
-                            <td>600.78</td>
-                            <td>570.00</td>
-                            <td>1901</td>
-                        </tr>
-                        </tbody>
-                        <tbody class="bg-1a">
-                        <tr>
-                            <td>美原油</td>
-                            <td>买</td>
-                            <td>开</td>
-                            <td>20</td>
-                            <td>16</td>
-                            <td>1005.00</td>
-                            <td>1275.00</td>
-                            <td>600.78</td>
-                            <td>570.00</td>
-                            <td>1901</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </form>
-            </div>
-            <div class="deal-recall">
-                <button type="button">撤单</button>
-                <button type="button">全部撤单</button>
-            </div>
-            <div class="myTables white">
-                <form>
-                    <table class="table myTable">
-                        <thead class="bg-1a">
-                        <tr>
-                            <th>委托时间</th>
+                            <th>成交时间</th>
                             <th>合约</th>
                             <th>买卖</th>
                             <th>开平</th>
-                            <th>委托价格</th>
-                            <th>委手</th>
-                            <th>成手</th>
-                            <th>状态</th>
-                            <th>备注</th>
+                            <th>成交价格</th>
+                            <th>手数</th>
                             <th>委托号</th>
-                            <th>名称号</th>
+                            <th>名称</th>
                             <th>系统号</th>
+                            <th>成交号</th>
                         </tr>
                         </thead>
                         <tbody class="bg-1a">
@@ -581,14 +516,12 @@
                             <td>美原油</td>
                             <td>买</td>
                             <td>开</td>
-                            <td>666.00</td>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>未成交</td>
-                            <td></td>
+                            <td>1200.00</td>
+                            <td>5</td>
                             <td>01</td>
                             <td>1901</td>
                             <td>111</td>
+                            <td>123</td>
                         </tr>
                         </tbody>
                         <tbody class="bg-1a">
@@ -597,54 +530,14 @@
                                 <span>2018-07-30</span>
                                 <span>15:12:00</span>
                             </td>
-                            <td>美原油</td>
-                            <td>卖</td>
-                            <td>开</td>
-                            <td>100.00</td>
-                            <td>3</td>
-                            <td>1</td>
-                            <td>部分成交</td>
-                            <td></td>
-                            <td>02</td>
-                            <td>1902</td>
-                            <td>222</td>
-                        </tr>
-                        </tbody>
-                        <tbody class="bg-1a">
-                        <tr>
-                            <td>
-                                <span>2018-07-30</span>
-                                <span>15:12:00</span>
-                            </td>
-                            <td>美原油</td>
+                            <td>天然气</td>
                             <td>买</td>
                             <td>开</td>
-                            <td>666.00</td>
+                            <td>1200.00</td>
                             <td>1</td>
-                            <td>1</td>
-                            <td>已成交</td>
-                            <td></td>
-                            <td>01</td>
-                            <td>1901</td>
-                            <td>111</td>
-                        </tr>
-                        </tbody>
-                        <tbody class="bg-1a">
-                        <tr>
-                            <td>
-                                <span>2018-07-30</span>
-                                <span>15:12:00</span>
-                            </td>
-                            <td>美原油</td>
-                            <td>卖</td>
-                            <td>平</td>
-                            <td>100.00</td>
-                            <td>3</td>
-                            <td>0</td>
-                            <td>未成交</td>
-                            <td></td>
-                            <td>02</td>
-                            <td>1902</td>
+                            <td>12</td>
+                            <td>1809</td>
+                            <td>011</td>
                             <td>222</td>
                         </tr>
                         </tbody>
@@ -654,17 +547,32 @@
                                 <span>2018-07-30</span>
                                 <span>15:12:00</span>
                             </td>
-                            <td>美原油</td>
+                            <td>天然气</td>
                             <td>卖</td>
                             <td>平</td>
-                            <td>100.00</td>
+                            <td>620.10</td>
                             <td>3</td>
-                            <td>1</td>
-                            <td>部分成交</td>
-                            <td></td>
-                            <td>02</td>
-                            <td>1902</td>
-                            <td>222</td>
+                            <td>08</td>
+                            <td>1812</td>
+                            <td>321</td>
+                            <td>196</td>
+                        </tr>
+                        </tbody>
+                        <tbody class="bg-1a">
+                        <tr>
+                            <td>
+                                <span>2018-07-30</span>
+                                <span>15:12:00</span>
+                            </td>
+                            <td>CMX银</td>
+                            <td>卖</td>
+                            <td>开</td>
+                            <td>620.10</td>
+                            <td>2</td>
+                            <td>05</td>
+                            <td>1903</td>
+                            <td>105</td>
+                            <td>006</td>
                         </tr>
                         </tbody>
                     </table>
@@ -682,7 +590,7 @@
     <div class="pop-up-box">
         <div class="set-title">
             <span>交易设置</span>
-            <img src="../images/close.png" class="set-close">
+            <img src="../../images/close.png" class="set-close">
         </div>
         <div class="set-main">
             <p>交易界面</p>
@@ -727,7 +635,7 @@
     <div class="pop-up-box">
         <div class="buyInput-title">
             <span>下单提示</span>
-            <img src="../images/close.png" class="buyInput-close">
+            <img src="../../images/close.png" class="buyInput-close">
         </div>
         <div class="buyInput-main">
             <div>
@@ -759,7 +667,7 @@
     <div class="pop-up-box">
         <div class="buyInput-title">
             <span>下单提示</span>
-            <img src="../images/close.png" class="buyOut-close">
+            <img src="../../images/close.png" class="buyOut-close">
         </div>
         <div class="buyInput-main">
             <div>
@@ -791,7 +699,7 @@
     <div class="pop-up-box">
         <div class="buyInput-title">
             <span>平仓提示</span>
-            <img src="../images/close.png" class="buying-close">
+            <img src="../../images/close.png" class="buying-close">
         </div>
         <div class="buyInput-main">
             <div>
@@ -840,7 +748,7 @@
     <div class="pop-up-box">
         <div class="termSheet-title">
             <span>免责条款声明</span>
-            <img src="../images/close.png" class="termSheet-close">
+            <img src="../../images/close.png" class="termSheet-close">
         </div>
         <div class="termSheet-main">
             <div>测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
@@ -856,7 +764,7 @@
     <div class="pop-up-box">
         <div class="about-title">
             <span>关于我们</span>
-            <img src="../images/close.png" class="about-close">
+            <img src="../../images/close.png" class="about-close">
         </div>
         <div class="about-main">
             <img src="">
@@ -869,7 +777,7 @@
 </div>
 <!--关于 end-->
 <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-<script src="../component/module.js"></script>
-<script src="../component/dealMain.js"></script>
+<script src="../../component/module.js"></script>
+<script src="../../component/dealMain.js"></script>
 </body>
 </html>

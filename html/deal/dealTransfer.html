@@ -3,9 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>恒瑞国际</title>
-    <link rel="stylesheet" href="../component/module.css">
-    <link rel="stylesheet" href="../component/dealMain.css">
-    <link rel="stylesheet" href="../css/dealSucceed.css">
+    <link rel="stylesheet" href="../../component/module.css">
+    <link rel="stylesheet" href="../../component/dealMain.css">
+    <link rel="stylesheet" href="../../css/dealTransfer.css">
 </head>
 <body>
 <!--顶部菜单-->
@@ -375,7 +375,7 @@
 <footer class="bg-black">
     <div class="exchange bg-1a">
         <ul>
-            <li><a href="#" class="white">中金所CFFEX</a></li>
+            <li><a href="#" class="white exchange-bg">中金所CFFEX</a></li>
             <li><a href="#" class="white">纽约NYMEX</a></li>
             <li><a href="#" class="white">纽约COMEX</a></li>
             <li><a href="#" class="white">香港HKEx</a></li>
@@ -408,175 +408,55 @@
             </div>
         </div>
         <div class="time">
-            <img src="../images/xinhao.png" class="signal">
+            <img src="../../images/xinhao.png" class="signal">
             <span id="time" class="white"></span>
-            <img src="../images/guanbi1.png" class="timeClose">
+            <img src="../../images/guanbi1.png" class="timeClose">
         </div>
     </div>
     <div class="footer-main">
         <div class="deal-menu bg-1a">
-            <a href="dealMain.html" class="white">交易</a>
+            <a href="../dealMain.html" class="white">交易</a>
             <a href="dealEntrust.html" class="white">当日委托</a>
             <a href="dealSucceed.html" class="white">当日成交</a>
             <a href="dealPossess.html" class="white">持仓</a>
-            <a href="#" class="white">条件单</a>
-            <a href="#" class="white">资金流水查询</a>
+            <a href="dealRule.html" class="white">条件单</a>
+            <a href="dealQuery/queryCapital.html" class="white">资金流水查询</a>
             <a href="#" class="white" id="set">参数设置</a>
-            <a href="#" class="white">银期转账</a>
-            <a href="#" class="white">修改密码</a>
+            <a href="dealTransfer.html" class="white red">银期转账</a>
+            <a href="dealPwd.html" class="white">修改密码</a>
         </div>
         <div class="deal-buy white">
-            <div class="buy-title bg-1a">三键下单</div>
-            <div class="buy-price">
-                <p>合约</p>
-                <select>
-                    <option>上证300</option>
-                    <option>上证300</option>
-                    <option>上证300</option>
-                </select>
-                <select>
-                    <option>投机</option>
-                    <option>投机</option>
-                    <option>投机</option>
-                </select>
+            <div>
+                <span>交易账户</span>
+                <span>320065</span>
+                <button type="button" class="bg-red" id="setBank">设定签约银行</button>
             </div>
-            <div class="buy-price">
-                <p>数量</p>
-                <div>
-                    <input type="number" value="1">
-                </div>
-                <p>价格</p>
+            <div>
+                <span>转账金额</span>
+                <input type="number">
+            </div>
+            <div>
+                <span>币种</span>
                 <select>
-                    <option>市价</option>
-                    <option>市价</option>
-                    <option>市价</option>
+                    <option>RMB</option>
+                    <option>USD</option>
+                    <option>EUR</option>
                 </select>
             </div>
-            <div class="buy-price">
-                <p>可开<span> < = 0</span></p>
-                <p>可开<span> < = 0</span></p>
+            <div>
+                <span>银行</span>
+                <select>
+                    <option>建设银行</option>
+                    <option>中国银行</option>
+                    <option>工商银行</option>
+                    <option>交通银行</option>
+                    <option>农业银行</option>
+                    <option>邮政储蓄</option>
+                </select>
             </div>
-            <div class="buy-price">
-                <div class="buy-operate bg-1a">
-                    <div class="operate-num">3000.12</div>
-                    <button type="button" class="operate bg-1a white" id="buyInput">买入</button>
-                </div>
-                <div class="buy-operate bg-1a">
-                    <div class="operate-num">3000.12</div>
-                    <button type="button" class="operate bg-1a white" id="buyOut">卖出</button>
-                </div>
-                <div class="buy-operate bg-1a">
-                    <div class="operate-num"></div>
-                    <button type="button" class="operate bg-1a white" id="buying">平仓</button>
-                </div>
-            </div>
-            <div class="operate-btn">
-                <button type="button" class="check">查可开</button>
-                <button type="button" class="reset">复位</button>
-            </div>
-        </div>
-        <div class="deal-details">
-            <div class="choice white">
-                <div>
-                    <input type="checkbox">
-                    <span>总成交明细</span>
-                </div>
-                <div>
-                    <input type="checkbox">
-                    <span>按委托汇总</span>
-                </div>
-                <div>
-                    <input type="checkbox">
-                    <span>按合约汇总</span>
-                </div>
-            </div>
-            <div class="myTables white">
-                <form>
-                    <table class="table myTable">
-                        <thead>
-                        <tr>
-                            <th>成交时间</th>
-                            <th>合约</th>
-                            <th>买卖</th>
-                            <th>开平</th>
-                            <th>成交价格</th>
-                            <th>手数</th>
-                            <th>委托号</th>
-                            <th>名称</th>
-                            <th>系统号</th>
-                            <th>成交号</th>
-                        </tr>
-                        </thead>
-                        <tbody class="bg-1a">
-                        <tr>
-                            <td>
-                                <span>2018-07-30</span>
-                                <span>15:12:00</span>
-                            </td>
-                            <td>美原油</td>
-                            <td>买</td>
-                            <td>开</td>
-                            <td>1200.00</td>
-                            <td>5</td>
-                            <td>01</td>
-                            <td>1901</td>
-                            <td>111</td>
-                            <td>123</td>
-                        </tr>
-                        </tbody>
-                        <tbody class="bg-1a">
-                        <tr>
-                            <td>
-                                <span>2018-07-30</span>
-                                <span>15:12:00</span>
-                            </td>
-                            <td>天然气</td>
-                            <td>买</td>
-                            <td>开</td>
-                            <td>1200.00</td>
-                            <td>1</td>
-                            <td>12</td>
-                            <td>1809</td>
-                            <td>011</td>
-                            <td>222</td>
-                        </tr>
-                        </tbody>
-                        <tbody class="bg-1a">
-                        <tr>
-                            <td>
-                                <span>2018-07-30</span>
-                                <span>15:12:00</span>
-                            </td>
-                            <td>天然气</td>
-                            <td>卖</td>
-                            <td>平</td>
-                            <td>620.10</td>
-                            <td>3</td>
-                            <td>08</td>
-                            <td>1812</td>
-                            <td>321</td>
-                            <td>196</td>
-                        </tr>
-                        </tbody>
-                        <tbody class="bg-1a">
-                        <tr>
-                            <td>
-                                <span>2018-07-30</span>
-                                <span>15:12:00</span>
-                            </td>
-                            <td>CMX银</td>
-                            <td>卖</td>
-                            <td>开</td>
-                            <td>620.10</td>
-                            <td>2</td>
-                            <td>05</td>
-                            <td>1903</td>
-                            <td>105</td>
-                            <td>006</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </form>
+            <div>
+                <button type="button" class="bg-violet" id="deposit">入金（银行资金转账户）</button>
+                <button type="button" class="bg-green" id="withdrawal">出金（账户资金转银行）</button>
             </div>
         </div>
     </div>
@@ -590,7 +470,7 @@
     <div class="pop-up-box">
         <div class="set-title">
             <span>交易设置</span>
-            <img src="../images/close.png" class="set-close">
+            <img src="../../images/close.png" class="set-close">
         </div>
         <div class="set-main">
             <p>交易界面</p>
@@ -630,125 +510,91 @@
 </div>
 <!--参数设置 end-->
 
-<!--买入-->
-<div class="pop-up buyInput">
+<!--设定签约银行-->
+<div class="pop-up setBank">
     <div class="pop-up-box">
-        <div class="buyInput-title">
-            <span>下单提示</span>
-            <img src="../images/close.png" class="buyInput-close">
+        <div class="setBank-title">
+            <span>设定签约银行</span>
+            <img src="../../images/close.png" class="setBank-close">
         </div>
-        <div class="buyInput-main">
+        <div class="setBank-main">
             <div>
-                <p>美原油1901</p>
-                <p>买入</p>
+                <span>姓名</span>
+                <input type="text">
             </div>
             <div>
-                <p>开仓</p>
-                <p>1手</p>
+                <span>身份证号</span>
+                <input type="number">
             </div>
             <div>
-                <p>价格：<span>1003.2200</span></p>
-                <p>市价</p>
+                <span>银行</span>
+                <select>
+                    <option>建设银行</option>
+                    <option>中国银行</option>
+                    <option>工商银行</option>
+                    <option>交通银行</option>
+                    <option>农业银行</option>
+                    <option>邮政储蓄</option>
+                </select>
+            </div>
+            <div>
+                <span>开户行地址</span>
+                <input type="text">
+            </div>
+            <div>
+                <span>账户</span>
+                <input type="number">
             </div>
         </div>
-        <div class="dealMain-btn">
-            <button type="button" id="buyInput-OK">确定</button>
-            <button type="button" class="buyInput-close">取消</button>
+        <div class="setBank-btn">
+            <button type="button" class="setBank-close">提交</button>
         </div>
     </div>
 </div>
-<div class="pop-up buyInput-OK">
-    <button type="button" class="deal-OK buyInput-close">买入成功</button>
-</div>
-<!--买入 end-->
+<!--设定签约银行 end-->
 
-<!--卖出-->
-<div class="pop-up buyOut">
+<!--入金-->
+<div class="pop-up deposit">
     <div class="pop-up-box">
-        <div class="buyInput-title">
-            <span>下单提示</span>
-            <img src="../images/close.png" class="buyOut-close">
+        <div class="deposit-title">
+            <span>确认入金</span>
+            <img src="../../images/close.png" class="deposit-close">
         </div>
-        <div class="buyInput-main">
-            <div>
-                <p>美原油1901</p>
-                <p>卖出</p>
-            </div>
-            <div>
-                <p>开仓</p>
-                <p>1手</p>
-            </div>
-            <div>
-                <p>价格：<span>1003.2200</span></p>
-                <p>市价</p>
-            </div>
+        <div class="deposit-main">
+            <p>确认入金人民币：<span>100.00</span>元（约<span>13.89</span>美元）</p>
         </div>
-        <div class="dealMain-btn">
-            <button type="button" id="buyOut-OK">确定</button>
-            <button type="button" class="buyOut-close">取消</button>
+        <div class="deposit-btn">
+            <button type="button">是</button>
+            <button type="button" class="deposit-close">否</button>
         </div>
     </div>
 </div>
-<div class="pop-up buyOut-OK">
-    <button type="button" class="deal-OK buyOut-close">卖出成功</button>
-</div>
-<!--卖出 end-->
+<!--入金 end-->
 
-<!--平仓-->
-<div class="pop-up buying">
+<!--出金-->
+<div class="pop-up withdrawal">
     <div class="pop-up-box">
-        <div class="buyInput-title">
-            <span>平仓提示</span>
-            <img src="../images/close.png" class="buying-close">
+        <div class="deposit-title">
+            <span>确认出金</span>
+            <img src="../../images/close.png" class="withdrawal-close">
         </div>
-        <div class="buyInput-main">
-            <div>
-                <p>美原油1901</p>
-                <p>平仓</p>
-            </div>
-            <div>
-                <p>1手</p>
-                <p>市价</p>
-            </div>
-            <div>
-                <p>价格：<span>1003.2200</span></p>
-                <p></p>
-            </div>
+        <div class="deposit-main">
+            <p>确认出金人民币：<span>100.00</span>元（约<span>13.89</span>美元）</p>
         </div>
-        <div class="dealMain-btn">
-            <button type="button" id="buying-OK">确定</button>
-            <button type="button" class="buying-close">取消</button>
+        <div class="deposit-btn">
+            <button type="button">是</button>
+            <button type="button" class="withdrawal-close">否</button>
         </div>
     </div>
 </div>
-<div class="pop-up buying-OK">
-    <button type="button" class="deal-OK buying-close">已平仓</button>
-</div>
-<!--平仓 end-->
-
-<!--全部平仓-->
-<div class="pop-up allOut">
-    <div class="pop-up-box">
-        <div class="allOut-title">
-            <p>确认平仓</p>
-        </div>
-        <div class="allOut-main">
-            <p>确认平掉所有持仓?</p>
-        </div>
-        <div class="dealMain-btn">
-            <button type="button">确认</button>
-            <button type="button" id="allOut-close">取消</button>
-        </div>
-    </div>
-</div>
-<!--全部平仓 end-->
+<!--出金 end-->
 
 <!--免责条款-->
 <div class="pop-up termSheet">
     <div class="pop-up-box">
         <div class="termSheet-title">
             <span>免责条款声明</span>
-            <img src="../images/close.png" class="termSheet-close">
+            <img src="../../images/close.png" class="termSheet-close">
         </div>
         <div class="termSheet-main">
             <div>测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
@@ -764,7 +610,7 @@
     <div class="pop-up-box">
         <div class="about-title">
             <span>关于我们</span>
-            <img src="../images/close.png" class="about-close">
+            <img src="../../images/close.png" class="about-close">
         </div>
         <div class="about-main">
             <img src="">
@@ -777,7 +623,8 @@
 </div>
 <!--关于 end-->
 <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-<script src="../component/module.js"></script>
-<script src="../component/dealMain.js"></script>
+<script src="../../component/module.js"></script>
+<script src="../../component/dealMain.js"></script>
+<script src="../../js/dealTransfer.js"></script>
 </body>
 </html>

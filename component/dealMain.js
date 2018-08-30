@@ -1,10 +1,12 @@
 // 参数设置
 $('#set').click(function () {
     $('#dim').addClass('dim');
+    $('#set').addClass('red');
     $('.set').show();
 });
 $('.set-close').click(function () {
     $('#dim').removeClass('dim');
+    $('#set').removeClass('red');
     $('.set').hide();
 });
 //买入

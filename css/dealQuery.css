@@ -1,5 +1,5 @@
 .capital-tab {
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 .capital-tab ul {
     padding: 0;
@@ -8,11 +8,22 @@
     list-style: none;
 }
 .capital-tab ul li {
+    width: 33%;
     font-size: 12px;
     display: inline-block;
 }
 .capital-tab ul li a {
-    padding: 10px 25px;
+    width: 100%;
+    padding: 10px 0;
+    display: inline-block;
+}
+.capital-tab ul li a:hover {
+    color: #fff!important;
+    background-color: #393939!important;
+}
+.bg-query {
+    color: #fff!important;
+    background-color: #393939!important;
 }
 .query-time {
     margin-left: 15px;
@@ -22,4 +33,25 @@
     border: 1px solid #8e8e8e;
     border-radius: 5px;
     margin-left: 10px;
+}
+.query-btn {
+    margin: 20px 0;
+}
+.query-btn button {
+    padding: 5px 20px;
+    color: #fff;
+    background-color: #839fff;
+    border: none;
+    border-radius: 15px;
+    float: right;
+    cursor: pointer;
+}
+.deal-details {
+    padding-right: 100px;
+}
+.contract {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

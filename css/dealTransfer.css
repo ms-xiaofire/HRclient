@@ -1,0 +1,124 @@
+.deal-buy {
+    width: 50%;
+    margin: 20px;
+}
+.deal-buy div {
+    margin-bottom: 15px;
+}
+.deal-buy div span {
+    min-width: 80px;
+    display: inline-block;
+}
+.deal-buy div button {
+    padding: 3px 15px;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+.bg-red {
+    background-color: #c65d61;
+}
+.bg-violet {
+    background-color: #839fff;
+}
+.bg-green {
+    background-color: #009688;
+}
+.deal-buy div input {
+    width: 70px;
+    padding: 2px 10px;
+    background-color: #8e8e8e;
+    border: 1px solid #8e8e8e;
+}
+.deal-buy div select {
+    padding-right: 20px;
+    background-color: #8e8e8e;
+    border: 1px solid #8e8e8e;
+    border-radius: 5px;
+}
+/*弹窗*/
+/*设定签约银行*/
+.setBank {
+    font-size: 12px;
+}
+.pop-up-box {
+    width: 350px;
+    padding: 30px;
+}
+.setBank-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.setBank-title span {
+    padding: 0 10px;
+    font-weight: bold;
+    border-left: 3px solid #839fff;
+}
+.setBank-title img {
+    width: 16px;
+    cursor: pointer;
+}
+.setBank-main div {
+    margin: 25px 0;
+}
+.setBank-main span {
+    min-width: 80px;
+    display: inline-block;
+}
+.setBank-main input {
+    min-width: 200px;
+    padding: 2px 10px;
+    border: 1px solid #8e8e8e;
+}
+.setBank-main select {
+    min-width: 222px;
+    padding: 2px 10px;
+    border: 1px solid #8e8e8e;
+}
+.setBank-btn {
+    text-align: center;
+}
+.setBank-btn button {
+    padding: 5px 45px;
+    color: #fff;
+    background-color: #839fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+/*入金*/
+.deposit, .withdrawal {
+    font-size: 14px;
+}
+.deposit-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.deposit-title span {
+    font-weight: bold;
+}
+.deposit-title img {
+    width: 16px;
+    float: right;
+    cursor: pointer;
+}
+.deposit-main {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.deposit-btn {
+    text-align: center;
+}
+.deposit-btn button {
+    font-size: 12px;
+    padding: 5px 35px;
+    color: #fff;
+    background-color: #839fff;
+    border: none;
+    border-radius: 15px;
+    margin: 0 20px;
+    cursor: pointer;
+}
