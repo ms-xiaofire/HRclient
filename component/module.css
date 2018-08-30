@@ -66,6 +66,9 @@ body {
     color: #fff;
     background-color: #1a1a1a;
 }
+.header-block {
+    display: block;
+}
 #analyze {
     left: 85px;
 }

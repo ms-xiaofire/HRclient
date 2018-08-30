@@ -1,7 +1,7 @@
 // 弹窗
 //登录
 $('#login').click(function () {
-    window.location.href = 'dealMain.html';
+    window.location.href = 'dealLogin.html';
 });
 //找回密码
 $('#submit-pwd').click(function () {

@@ -28,33 +28,33 @@ function prevent(event) {
 
 //选择顶部菜单
 $('#menuSystem').click(function () {
-    $('#system').show();
+    $('#system').slideToggle();
     prevent(event);
 });
 $('#menuAnalyze').click(function () {
-    $('#analyze').show();
+    $('#analyze').slideToggle();
     prevent(event);
 });
 $('#menuDeal').click(function () {
-    $('#deal').show();
+    $('#deal').slideToggle();
     prevent(event);
 });
 $('#menuTool').click(function () {
-    $('#tool').show();
+    $('#tool').slideToggle();
     prevent(event);
 });
 $('#menuHelp').click(function () {
-    $('#help').show();
+    $('#help').slideToggle();
     prevent(event);
 });
 
 //顶部菜单收起
 $(document).click(function () {
-    $('#system').hide();
-    $('#analyze').hide();
-    $('#deal').hide();
-    $('#tool').hide();
-    $('#help').hide();
+    $('#system').slideUp();
+    $('#analyze').slideUp();
+    $('#deal').slideUp();
+    $('#tool').slideUp();
+    $('#help').slideUp();
 });
 
 //显示风格
@@ -102,9 +102,4 @@ $('#about').click(function () {
 $('.about-close').click(function () {
     $('#dim').removeClass('dim');
     $('.about').hide();
-});
-
-//交易登录
-$('#dealLogin').click(function () {
-    window.location.href = 'dealMain.html'
 });

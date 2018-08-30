@@ -1,3 +1,11 @@
+//交易登录
+$('#dealLogin').click(function () {
+    window.location.href = 'dealMain.html'
+});
+//交易退出
+$('#dealOut').click(function () {
+    window.location.href = 'index.html'
+});
 // 参数设置
 $('#set').click(function () {
     $('#dim').addClass('dim');
