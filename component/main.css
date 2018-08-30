@@ -1,0 +1,53 @@
+.aqua {
+    color: #009688;
+}
+.table-box {
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.table-title {
+    color: orange;
+    font-weight: bold;
+    margin: 10px;
+}
+.price-table {
+    font-size: 12px;
+    display: flex;
+}
+.price-table form {
+    width: 25%;
+}
+.border-right {
+    border-right: 1px solid #4c4c4c;
+}
+.chart-box {
+    min-height: 500px;
+    display: flex;
+}
+.k-chart {
+    width: 80%;
+}
+.chart-details {
+    width: 20%;
+}
+.chart-sort {
+    font-size: 14px;
+    margin: 0 -10px;
+    overflow: hidden;
+}
+.chart-sort ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.chart-sort ul li {
+    display: inline-flex;
+}
+.chart-sort ul li a {
+    padding: 5px 15px;
+}
+.chart-sort ul li a:hover {
+    color: #fff!important;
+    background-color: #393939!important;
+}
