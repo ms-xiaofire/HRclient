@@ -28,7 +28,7 @@
                     this.value = "重新发送 (" + sleep-- + ")";
                     interval = setInterval (function ()
                     {
-                        if (sleep == 0)
+                        if (sleep === 0)
                         {
                             if (!!interval)
                             {
@@ -50,6 +50,6 @@
     </script>
 </head>
 <body>
-<input class="checkCode" type="button" id="btn" value="免费获取验证码" />
+<input type="button" id="btn" value="免费获取验证码" />
 </body>
 </html>

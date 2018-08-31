@@ -61,6 +61,19 @@ a, a:hover, a:focus {
     margin: 20px auto 0;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+.login-input div {
+    height: 31px;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 0 40px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.tab-pwd {
+    color: #3f51b5;
+    border-bottom: 2px solid #3f51b5;
 }
 .login-input span {
     min-width: 60px;
@@ -88,16 +101,18 @@ a, a:hover, a:focus {
     display: inline-block;
 }
 .pwd-verify input {
-    width: 102px;
+    width: 100px;
     padding: 10px;
     margin-left: 20px;
 }
-.pwd-verify button {
+#verify {
+    min-width: 100px;
+    height: 40px;
+    padding: 0;
     color: #fff;
     background-color: #3f51b5;
     border: 1px solid #3f51b5;
-    padding: 10px;
-    margin-left: 25px;
+    margin-left: 15px;
     cursor: pointer;
 }
 .login-pwd {

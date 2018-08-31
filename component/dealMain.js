@@ -1,6 +1,20 @@
 //交易登录
+function check() {
+    let flag = false;
+    $("input[name='dealLogin']").each(function () {
+        if($(this).val() === '') {
+            flag = true;
+            return false;
+        }
+    });
+    return flag;
+}
 $('#dealLogin').click(function () {
-    window.location.href = 'dealMain.html'
+    if(check()) {
+        layer.msg('条件不能为空！');
+    }else {
+        window.location.href = 'dealMain.html'
+    }
 });
 //交易退出
 $('#dealOut').click(function () {

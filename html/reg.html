@@ -18,24 +18,24 @@
             </div>
             <div class="login-input">
                 <span>手机号</span>
-                <input type="number" placeholder="请输入注册的手机号">
+                <input type="number" name="regName" placeholder="请输入注册的手机号">
             </div>
             <div class="login-input">
                 <span>新密码</span>
-                <input type="password" placeholder="请输入新密码">
+                <input type="password" name="regName" id="regPwd" placeholder="请输入新密码">
             </div>
             <div class="login-input">
                 <span>确认新密码</span>
-                <input type="password" placeholder="请再次输入新密码">
+                <input type="password" name="regName" id="confirmPwd" placeholder="请再次输入新密码">
             </div>
             <div class="pwd-verify">
                 <span>验证码</span>
-                <input type="text" placeholder="请输入验证码">
-                <button type="button">获取验证码</button>
+                <input type="text" name="regName" placeholder="请输入验证码">
+                <input type="button" id="verify" value="获取验证码">
             </div>
             <div class="login-input">
                 <span>机构编号</span>
-                <input type="password" placeholder="请输入机构编号">
+                <input type="password" name="regName" placeholder="请输入机构编号">
             </div>
             <div class="login-btn">
                 <button type="button" id="submit-reg">提交</button>
@@ -62,6 +62,7 @@
 <!--注册 end-->
 <!--弹窗 end-->
 <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="../component/layui-v2.3.0/layui/layui.js"></script>
 <script src="../js/index.js"></script>
 </body>
 </html>
