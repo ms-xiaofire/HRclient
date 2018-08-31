@@ -25,16 +25,20 @@ input::-webkit-inner-spin-button {
 input[type="number"]{
     -moz-appearance: textfield;
 }
+html {
+    height: 100%;
+}
 body {
     margin: 0;
     position: relative;
-    /*max-height: 100%;*/
+    height: 100%;
     /*overflow: hidden;*/
 }
 /*公共样式 end*/
 
 /*顶部菜单*/
 .header {
+    height: 5%;
     padding: 0 30px;
     display: flex;
     align-items: center;
@@ -42,6 +46,7 @@ body {
 }
 .header-menu {
     padding: 0;
+    margin: 0;
     list-style: none;
 }
 .header-menu li {
@@ -52,12 +57,13 @@ body {
     color: #3f51b5;
 }
 .menu {
+    font-size: 14px;
     position: absolute;
     background-color: #8e8e8e;
     list-style: none;
     padding: 0;
     margin: 0;
-    top: 53px;
+    top: 5%;
     display: none;
 }
 .menu li {
@@ -87,11 +93,12 @@ body {
 
 /*表单数据*/
 .main {
+    height: 55%;
     padding: 0 10px;
-    overflow: hidden;
 }
 .nav {
     font-size: 12px;
+    overflow: hidden;
 }
 .nav ul {
     padding: 0;
@@ -115,10 +122,14 @@ body {
 .table tbody tr td {
     height: 30px;
 }
+.pagination {
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+}
 .pagination ul {
     padding: 0;
     list-style: none;
-    float: right;
     margin-right: 20px;
 }
 .pagination ul li {
@@ -134,6 +145,9 @@ body {
 /*表单数据 end*/
 
 /*底部*/
+footer {
+    height: 40%;
+}
 .exchange {
     margin-bottom: 2px;
     overflow: hidden;
@@ -215,6 +229,23 @@ body {
     background-color: #fff;
     transform: translate(-50%, -50%);
     overflow: hidden;
+}
+/*使用说明*/
+.shortcut-main {
+    width: 60%;
+    margin: 0 auto 30px;
+}
+.shortcut-main div {
+    margin: 10px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.shortcut-main div span {
+    width: 70px;
+    text-align: left;
+    display: inline-block;
 }
 /*免责条款*/
 .termSheet-title {

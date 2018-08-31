@@ -22,7 +22,7 @@
     border-right: 1px solid #4c4c4c;
 }
 .chart-box {
-    min-height: 500px;
+    min-height: 300px;
     display: flex;
 }
 .k-chart {
@@ -56,11 +56,11 @@
     overflow: hidden;
 }
 .det-box {
-    font-size: 14px;
+    font-size: 12px;
     border-top: 1px solid #4c4c4c;
 }
 .det-box div {
-    margin: 10px;
+    margin: 8px;
     display: flex;
 }
 .width-100 {

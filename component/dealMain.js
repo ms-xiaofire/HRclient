@@ -16,10 +16,14 @@ $('#dealLogin').click(function () {
         window.location.href = 'dealMain.html'
     }
 });
+
 //交易退出
 $('#dealOut').click(function () {
-    window.location.href = 'index.html'
+    localStorage.clear('footers');
+    window.location.reload();
 });
+
+//弹窗
 // 参数设置
 $('#set').click(function () {
     $('#dim').addClass('dim');
@@ -77,8 +81,38 @@ $('.buying-close').click(function () {
 $('#allOut').click(function () {
     $('#dim').addClass('dim');
     $('.allOut').show();
+    $('#allOut-title').text('全部平仓');
+    $('#allOut-main').text('确认平掉所有持仓?');
 });
 $('#allOut-close').click(function () {
     $('#dim').removeClass('dim');
     $('.allOut').hide();
+});
+//快捷平仓
+$('#rapidOut').click(function () {
+    $('#dim').addClass('dim');
+    $('.allOut').show();
+    $('#allOut-title').text('快捷平仓');
+    $('#allOut-main').text('确认平掉持仓?');
+});
+//快捷反手
+$('#rapidBack').click(function () {
+    $('#dim').addClass('dim');
+    $('.allOut').show();
+    $('#allOut-title').text('快捷反手');
+    $('#allOut-main').text('确认反手?');
+});
+//快捷锁仓
+$('#rapidLock').click(function () {
+    $('#dim').addClass('dim');
+    $('.allOut').show();
+    $('#allOut-title').text('快捷锁仓');
+    $('#allOut-main').text('确认锁仓?');
+});
+//止盈止损
+$('#stopProfit').click(function () {
+    $('#dim').addClass('dim');
+    $('.allOut').show();
+    $('#allOut-title').text('止盈止损');
+    $('#allOut-main').text('确认止盈止损?');
 });

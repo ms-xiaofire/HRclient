@@ -25,10 +25,10 @@
             <li id="outSystem"><a href="../index.html" class="white">退出系统</a></li>
         </ul>
         <ul class="menu white" id="analyze">
-            <li id="runChart">分时走势图</li>
-            <li id="analyzeChart">分析图</li>
-            <li id="dealDetail">分笔成交明细</li>
-            <li id="tariff">分价表</li>
+            <li id="runChart"><a href="../main/trendPen.html" class="white">分时走势图</a></li>
+            <li id="analyzeChart"><a href="../main/K-chart.html" class="white">分析图</a></li>
+            <li id="dealDetail"><a href="../main/penNum.html" class="white">分笔成交明细</a></li>
+            <li id="tariff"><a href="../main/priceNum.html" class="white">分价表</a></li>
         </ul>
         <ul class="menu white" id="deal">
             <li id="masterDeal">交易大师&emsp;&emsp;F12</li>
@@ -51,7 +51,7 @@
     </div>
     <div>
         <ul class="header-menu">
-            <li><a href="#" class="white">交易</a></li>
+            <li><a href="#" class="white" id="deals">交易</a></li>
             <li><a href="#" class="white">论坛</a></li>
         </ul>
     </div>
@@ -62,9 +62,9 @@
 <main class="main bg-black">
     <div class="nav">
         <ul>
-            <li><a href="../dealMain.html" class="white">返回</a></li>
+            <li><a href="#" onclick="javascript :history.back(-1);" class="white">返回</a></li>
             <li><a href="../dealMain.html" class="white">首页</a></li>
-            <li><a href="#" class="white">数据刷新</a></li>
+            <li><a href="#" class="white" id="F5">数据刷新</a></li>
             <li><a href="#" class="white">放大</a></li>
             <li><a href="#" class="white">缩小</a></li>
             <li><a href="#" class="white">报价</a></li>
@@ -631,10 +631,10 @@
 <div class="pop-up allOut">
     <div class="pop-up-box">
         <div class="allOut-title">
-            <p>确认平仓</p>
+            <p id="allOut-title">确认平仓</p>
         </div>
         <div class="allOut-main">
-            <p>确认平掉所有持仓?</p>
+            <p id="allOut-main">确认平掉所有持仓?</p>
         </div>
         <div class="dealMain-btn">
             <button type="button">确认</button>
@@ -644,6 +644,85 @@
 </div>
 <!--全部平仓 end-->
 
+<!--使用说明-->
+<div class="pop-up explain">
+    <div class="pop-up-box">
+        <div class="termSheet-title">
+            <span>使用说明</span>
+            <img src="../../images/close.png" class="explain-close">
+        </div>
+        <div class="explain-main">
+            <div></div>
+        </div>
+    </div>
+</div>
+<!--使用说明 end-->
+
+<!--快捷键-->
+<div class="pop-up shortcut">
+    <div class="pop-up-box">
+        <div class="termSheet-title">
+            <span>快捷键</span>
+            <img src="../../images/close.png" class="shortcut-close">
+        </div>
+        <div class="shortcut-main">
+            <div>
+                <span>ESC</span>
+                <span>返回</span>
+            </div>
+            <div>
+                <span>F1</span>
+                <span>快捷键</span>
+            </div>
+            <div>
+                <span>F2</span>
+                <span>关于</span>
+            </div>
+            <div>
+                <span>F3</span>
+                <span>免责条款</span>
+            </div>
+            <div>
+                <span>F4</span>
+                <span>使用说明</span>
+            </div>
+            <div>
+                <span>F5</span>
+                <span>数据刷新</span>
+            </div>
+            <div>
+                <span>F6</span>
+                <span>显示风格</span>
+            </div>
+            <div>
+                <span>F7</span>
+                <span>交易</span>
+            </div>
+            <div>
+                <span>F8</span>
+                <span>论坛</span>
+            </div>
+            <div>
+                <span>F9</span>
+                <span>连接服务器</span>
+            </div>
+            <div>
+                <span>F10</span>
+                <span>断开服务器</span>
+            </div>
+            <div>
+                <span>F11</span>
+                <span>退出系统</span>
+            </div>
+            <div>
+                <span>F12</span>
+                <span>交易大师</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--快捷键 end-->
+
 <!--免责条款-->
 <div class="pop-up termSheet">
     <div class="pop-up-box">
@@ -652,9 +731,7 @@
             <img src="../../images/close.png" class="termSheet-close">
         </div>
         <div class="termSheet-main">
-            <div>测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
-            <div>测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
-            <div>测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</div>
+            <div></div>
         </div>
     </div>
 </div>
