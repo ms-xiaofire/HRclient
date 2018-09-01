@@ -1,3 +1,11 @@
+//判断客户端大小
+let hight = document.documentElement.clientHeight;
+let width = document.documentElement.clientWidth;
+console.log(hight, width);
+if(width === 1216) {
+    $('.w1216').addClass('width1216');
+}
+
 // 默认风格
 let style = parseInt(localStorage.getItem('style'));
 if(style === 0) {

@@ -77,6 +77,17 @@ $('.buying-close').click(function () {
     $('.buying').hide();
     $('.buying-OK').hide();
 });
+//查可开
+$('#check').click(function () {
+    alert("查可开");
+});
+//复位
+$('#reset').click(function () {
+    $('#contract').val('上证300');
+    $('#num').val(1);
+    $('#price').val('市价');
+    // window.location.reload();
+});
 //全部平仓
 $('#allOut').click(function () {
     $('#dim').addClass('dim');

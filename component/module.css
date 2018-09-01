@@ -32,7 +32,10 @@ body {
     margin: 0;
     position: relative;
     height: 100%;
-    /*overflow: hidden;*/
+    overflow: hidden;
+}
+.width1216 {
+    display: none!important;
 }
 /*公共样式 end*/
 
@@ -64,6 +67,7 @@ body {
     padding: 0;
     margin: 0;
     top: 5%;
+    z-index: 100;
     display: none;
 }
 .menu li {
@@ -95,6 +99,7 @@ body {
 .main {
     height: 55%;
     padding: 0 10px;
+    overflow: hidden;
 }
 .nav {
     font-size: 12px;
@@ -147,6 +152,7 @@ body {
 /*底部*/
 footer {
     height: 40%;
+    overflow: hidden;
 }
 .exchange {
     margin-bottom: 2px;
@@ -300,3 +306,11 @@ footer {
     padding: 20px 0 10px;
 }
 /*弹出框 end*/
+
+
+@media screen and (max-width: 1224px){
+    .exchange a {
+        padding: 10px;
+        font-size: 12px;
+    }
+}

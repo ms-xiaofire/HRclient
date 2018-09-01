@@ -34,3 +34,11 @@
     border-radius: 15px;
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 1224px){
+    .deal-buy {
+        width: 20%;
+        margin: 10px 20px;
+    }
+}

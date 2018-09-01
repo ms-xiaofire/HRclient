@@ -38,7 +38,7 @@
             <li id="news"><a href="../main/news.html" class="white">新闻</a></li>
         </ul>
         <ul class="menu white" id="help">
-            <li id="instructions">使用说明</li>
+            <li id="explain">使用说明</li>
             <li id="shortcut">快捷键</li>
             <li id="termSheet">免责条款</li>
             <li id="about">关于</li>
@@ -387,27 +387,48 @@
             <div class="buy-title bg-1a">三键下单</div>
             <div class="buy-price">
                 <p>合约</p>
-                <select>
+                <select id="contract">
                     <option>上证300</option>
-                    <option>上证300</option>
-                    <option>上证300</option>
+                    <option>中证500</option>
+                    <option>上证50</option>
+                    <option>美原油</option>
+                    <option>天然气</option>
+                    <option>CMX铜</option>
+                    <option>CMX金</option>
+                    <option>CMX银</option>
+                    <option>恒指</option>
+                    <option>小恒指</option>
+                    <option>H股指</option>
+                    <option>小H股指</option>
+                    <option>小道指</option>
+                    <option>英镑</option>
+                    <option>日元</option>
+                    <option>瑞士</option>
+                    <option>欧元</option>
+                    <option>澳元</option>
+                    <option>加币</option>
+                    <option>纽元</option>
+                    <option>小纳指</option>
+                    <option>小普标</option>
+                    <option>小德指</option>
                 </select>
                 <select>
-                    <option>投机</option>
-                    <option>投机</option>
                     <option>投机</option>
                 </select>
             </div>
             <div class="buy-price">
                 <p>数量</p>
                 <div>
-                    <input type="number" value="1">
+                    <input type="number" value="1" id="num">
                 </div>
                 <p>价格</p>
-                <select>
+                <select id="price">
                     <option>市价</option>
-                    <option>市价</option>
-                    <option>市价</option>
+                    <option>对手价</option>
+                    <option>对手价超一</option>
+                    <option>对手价超二</option>
+                    <option>挂单价</option>
+                    <option>最新价</option>
                 </select>
             </div>
             <div class="buy-price">
@@ -429,8 +450,8 @@
                 </div>
             </div>
             <div class="operate-btn">
-                <button type="button" class="check">查可开</button>
-                <button type="button" class="reset">复位</button>
+                <button type="button" class="check" id="check">查可开</button>
+                <button type="button" class="reset" id="reset">复位</button>
             </div>
         </div>
         <div class="deal-state">

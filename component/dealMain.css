@@ -232,3 +232,23 @@
     cursor: pointer;
 }
 /*全部平仓 end*/
+
+
+@media screen and (max-width: 1224px){
+    .deal-menu {
+        padding: 10px;
+    }
+    .buy-title {
+        padding: 5px 10px;
+    }
+    .buy-price {
+        margin: 10px 0 0 0;
+        justify-content: end;
+    }
+    .buy-price select {
+        margin-right: 20px;
+    }
+    .deal-state div {
+        padding: 25px 5px!important;
+    }
+}

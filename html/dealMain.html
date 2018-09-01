@@ -295,7 +295,7 @@
                     <td class="blue">00:20:10</td>
                 </tr>
                 </tbody>
-                <tbody>
+                <tbody class="w1216">
                 <tr>
                     <td>1</td>
                     <td>天津松江</td>
@@ -316,7 +316,7 @@
                     <td class="blue">00:20:10</td>
                 </tr>
                 </tbody>
-                <tbody>
+                <tbody class="w1216">
                 <tr>
                     <td>1</td>
                     <td>天津松江</td>
@@ -407,27 +407,48 @@
             <div class="buy-title bg-1a">三键下单</div>
             <div class="buy-price">
                 <p>合约</p>
-                <select>
+                <select id="contract">
                     <option>上证300</option>
-                    <option>上证300</option>
-                    <option>上证300</option>
+                    <option>中证500</option>
+                    <option>上证50</option>
+                    <option>美原油</option>
+                    <option>天然气</option>
+                    <option>CMX铜</option>
+                    <option>CMX金</option>
+                    <option>CMX银</option>
+                    <option>恒指</option>
+                    <option>小恒指</option>
+                    <option>H股指</option>
+                    <option>小H股指</option>
+                    <option>小道指</option>
+                    <option>英镑</option>
+                    <option>日元</option>
+                    <option>瑞士</option>
+                    <option>欧元</option>
+                    <option>澳元</option>
+                    <option>加币</option>
+                    <option>纽元</option>
+                    <option>小纳指</option>
+                    <option>小普标</option>
+                    <option>小德指</option>
                 </select>
                 <select>
-                    <option>投机</option>
-                    <option>投机</option>
                     <option>投机</option>
                 </select>
             </div>
             <div class="buy-price">
                 <p>数量</p>
                 <div>
-                    <input type="number" value="1">
+                    <input type="number" value="1" id="num">
                 </div>
                 <p>价格</p>
-                <select>
+                <select id="price">
                     <option>市价</option>
-                    <option>市价</option>
-                    <option>市价</option>
+                    <option>对手价</option>
+                    <option>对手价超一</option>
+                    <option>对手价超二</option>
+                    <option>挂单价</option>
+                    <option>最新价</option>
                 </select>
             </div>
             <div class="buy-price">
@@ -449,8 +470,8 @@
                 </div>
             </div>
             <div class="operate-btn">
-                <button type="button" class="check">查可开</button>
-                <button type="button" class="reset">复位</button>
+                <button type="button" class="check" id="check">查可开</button>
+                <button type="button" class="reset" id="reset">复位</button>
             </div>
         </div>
         <div class="deal-state">
@@ -606,44 +627,6 @@
                             <td>01</td>
                             <td>1901</td>
                             <td>111</td>
-                        </tr>
-                        </tbody>
-                        <tbody class="bg-1a">
-                        <tr>
-                            <td>
-                                <span>2018-07-30</span>
-                                <span>15:12:00</span>
-                            </td>
-                            <td>美原油</td>
-                            <td>卖</td>
-                            <td>平</td>
-                            <td>100.00</td>
-                            <td>3</td>
-                            <td>0</td>
-                            <td>未成交</td>
-                            <td></td>
-                            <td>02</td>
-                            <td>1902</td>
-                            <td>222</td>
-                        </tr>
-                        </tbody>
-                        <tbody class="bg-1a">
-                        <tr>
-                            <td>
-                                <span>2018-07-30</span>
-                                <span>15:12:00</span>
-                            </td>
-                            <td>美原油</td>
-                            <td>卖</td>
-                            <td>平</td>
-                            <td>100.00</td>
-                            <td>3</td>
-                            <td>1</td>
-                            <td>部分成交</td>
-                            <td></td>
-                            <td>02</td>
-                            <td>1902</td>
-                            <td>222</td>
                         </tr>
                         </tbody>
                     </table>
