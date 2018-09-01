@@ -1,3 +1,14 @@
+//显示风格
+let styleColor = localStorage.getItem('style');
+let textStyles, bgStyle;
+if(styleColor === '1') {
+    textStyles = '#fff';
+    bgStyle = '#000';
+}else {
+    textStyles = '#000';
+    bgStyle = '#fff';
+}
+
 // 初始化echarts实例
 var myChart = echarts.init(document.getElementById('eCharts'));
 
@@ -140,7 +151,7 @@ option = {
         text: '上证指数',
         left: 0,
         textStyle: {
-            color: '#fff'
+            color: textStyles,
         }
     },
     tooltip: { //提示框
@@ -152,7 +163,7 @@ option = {
     legend: { //图例控件，点击图例控制哪些系列不现实
         data: ['日K', 'MA5', 'MA10', 'MA20', 'MA30'],
         textStyle: {
-            color: '#fff'
+            color: textStyles
         }
     },
     grid: { //直角坐标系
@@ -160,7 +171,7 @@ option = {
         left: '10%', //grid组件离容器左侧的距离
         right: '10%',
         bottom: '15%',
-        backgroundColor:'#000'
+        backgroundColor:bgStyle
     },
     xAxis: {
         type: 'category', //坐标轴类型，类目轴
@@ -175,7 +186,7 @@ option = {
         axisLabel: {
             show: true,
             textStyle: {
-                color: '#fff'
+                color: textStyles
             }
         }
     },
@@ -187,7 +198,7 @@ option = {
         axisLabel: {
             show: true,
             textStyle: {
-                color: '#fff'
+                color: textStyles
             }
         }
     },
