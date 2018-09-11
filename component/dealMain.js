@@ -23,6 +23,7 @@ $('#dealOut').click(function () {
     window.location.reload();
 });
 
+
 //弹窗
 // 参数设置
 $('#set').click(function () {

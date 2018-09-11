@@ -7,9 +7,10 @@
     font-size: 12px;
     margin-right: 50px;
 }
-.deal-logo img {
+.deal-logo div {
     width: 150px;
     height: 150px;
+    background-color: #fff;
 }
 .dealStation-right {
     font-size: 12px;

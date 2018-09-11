@@ -25,14 +25,16 @@
     display: flex;
 }
 .k-chart {
-    width: 80%;
+    width: 986px;
 }
 .eCharts {
     width: 100%;
     height: 100%;
 }
 .chart-details {
-    width: 20%;
+    flex: 1;
+    min-width: 200px;
+    margin-left: 10px;
 }
 .chart-sort {
     font-size: 14px;
@@ -64,6 +66,13 @@
 .det-box div {
     margin: 8px;
     display: flex;
+}
+.det-box form table {
+    width: 100%;
+    margin-left: 5px;
+}
+.det-box form table thead {
+    text-align: left;
 }
 .width-100 {
     width: 30%;

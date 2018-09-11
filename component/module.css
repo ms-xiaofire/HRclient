@@ -37,11 +37,17 @@ body {
 .width1216 {
     display: none!important;
 }
+.height85 {
+    height: 90%!important;
+}
+.height10 {
+    height: 5%!important;
+}
 /*公共样式 end*/
 
 /*顶部菜单*/
 .header {
-    height: 5%;
+    height: 50px;
     padding: 0 30px;
     display: flex;
     align-items: center;
@@ -97,7 +103,6 @@ body {
 
 /*表单数据*/
 .main {
-    height: 55%;
     padding: 0 10px;
     overflow: hidden;
 }
@@ -115,6 +120,9 @@ body {
 }
 .nav a:hover, .nav a:focus {
     color: #3f51b5;
+}
+.table-box {
+    height: 569px;
 }
 .tables {
     padding: 10px;
@@ -151,11 +159,12 @@ body {
 
 /*底部*/
 footer {
-    height: 40%;
+    height: 285px;
     overflow: hidden;
 }
 .exchange {
-    margin-bottom: 2px;
+    height: 50px;
+    margin: 0 -10px;
     overflow: hidden;
 }
 .exchange ul {
