@@ -23,7 +23,7 @@ var Kline = function (option) {
     this.debug = true;
     this.language = "zh-cn";
     this.theme = "dark";
-    this.ranges = ["1w", "1d", "1h", "30m", "15m", "5m", "1m", "line"];
+    this.ranges = ["1d","2h", "1h", "30m", "15m", "10m", "5m", "1m", "line"];
     this.showTrade = true;
     this.tradeWidth = 250;
     this.socketConnected = false;
@@ -5319,8 +5319,8 @@ DarkTheme.prototype.__construct = function () {
         this._colors[Theme.Color.PositiveDark] = "#3b0e08";
         this._colors[Theme.Color.NegativeDark] = "#004718";
     } else {
-        this._colors[Theme.Color.Positive] = "#19b34c";
-        this._colors[Theme.Color.Negative] = "#990e0e";
+        this._colors[Theme.Color.Positive] = "#990e0e";
+        this._colors[Theme.Color.Negative] = "#00ffff";
         this._colors[Theme.Color.PositiveDark] = "#004718";
         this._colors[Theme.Color.NegativeDark] = "#3b0e08";
     }
@@ -5334,8 +5334,8 @@ DarkTheme.prototype.__construct = function () {
     this._colors[Theme.Color.Indicator3] = "#6bf";
     this._colors[Theme.Color.Indicator4] = "#a5cf81";
     this._colors[Theme.Color.Indicator5] = "#e18b89";
-    this._colors[Theme.Color.Grid0] = "#333";
-    this._colors[Theme.Color.Grid1] = "#444";
+    this._colors[Theme.Color.Grid0] = "#990e0e";
+    this._colors[Theme.Color.Grid1] = "#990e0e";
     this._colors[Theme.Color.Grid2] = "#666";
     this._colors[Theme.Color.Grid3] = "#888";
     this._colors[Theme.Color.Grid4] = "#aaa";
@@ -9152,9 +9152,10 @@ function requestOverHttp() {
                     return Y + M + D + h + m + s;
                 }
 
+
                 var data2 = [];
                 for (var i = 0; i < res.length; i++) {
-                    data2.push(getdate(res[i].Date), res[i].Open, res[i].High, res[i].Low, res[i].LastClose, res[i].Volume);
+                    data2.push(getdate(res[i].Date), res[i].Open, res[i].High, res[i].Low, res[i].Close, res[i].Volume);
                 }
                 var lines = [];
                 for (var j = 0; j < data2.length; j += 6) {

@@ -95,45 +95,45 @@
                 <div class="det-box white">
                     <div>
                         <span>卖出</span>
-                        <span class="width-100 red">10200.0</span>
-                        <span class="width-100 orange">1</span>
+                        <span class="width-100 red" id="SV1"></span>
+                        <span class="width-100 orange" id="SP1"></span>
                     </div>
                     <div>
                         <span>买入</span>
-                        <span class="width-100 green">10000.0</span>
-                        <span class="width-100 orange">1</span>
+                        <span class="width-100 green" id="BV1"></span>
+                        <span class="width-100 orange" id="BP1"></span>
                     </div>
                 </div>
                 <div class="det-box white">
                     <div>
                         <span>最新</span>
-                        <span class="width-100 green">9000.0</span>
+                        <span class="width-100 green" id="NewPrice"></span>
                         <span class="margin-l">现手</span>
-                        <span class="width-100 orange">5</span>
+                        <span class="width-100 orange" id="Vol2"></span>
                     </div>
                     <div>
                         <span>涨跌</span>
-                        <span class="width-100 green">10.0</span>
+                        <span class="width-100" id="upDown"></span>
                         <span class="margin-l">昨结</span>
-                        <span class="width-100">5</span>
+                        <span class="width-100" id="LastClose"></span>
                     </div>
                     <div>
                         <span>幅度</span>
-                        <span class="width-100 green">0.51%</span>
+                        <span class="width-100" id="PriceChange"></span>
                         <span class="margin-l">开盘</span>
-                        <span class="width-100">6000.0</span>
+                        <span class="width-100" id="Open"></span>
                     </div>
                     <div>
                         <span>总手</span>
-                        <span class="width-100 orange">500</span>
+                        <span class="width-100 orange" id="Price3"></span>
                         <span class="margin-l">最高</span>
-                        <span class="width-100 red">3000.2</span>
+                        <span class="width-100 red" id="High"></span>
                     </div>
                     <div>
                         <span>持仓</span>
-                        <span class="width-100 orange">12345</span>
+                        <span class="width-100 orange" id="Open_Int"></span>
                         <span class="margin-l">最低</span>
-                        <span class="width-100 green">2800.8</span>
+                        <span class="width-100 green" id="Low"></span>
                     </div>
                 </div>
                 <div class="det-box white">
@@ -148,37 +148,29 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td>10:06</td>
-                                <td>10008.0</td>
-                                <td class="orange">1</td>
+                                <td class="penDate"></td>
+                                <td id="penBP1"></td>
+                                <td class="orange" id="penBV1"></td>
                             </tr>
-                            </tbody>
-                            <tbody>
                             <tr>
-                                <td>10:07</td>
-                                <td>10022.0</td>
-                                <td class="orange">1</td>
+                                <td class="penDate"></td>
+                                <td id="penBP2"></td>
+                                <td class="orange" id="penBV2"></td>
                             </tr>
-                            </tbody>
-                            <tbody>
                             <tr>
-                                <td>10:08</td>
-                                <td>10101.0</td>
-                                <td class="orange">3</td>
+                                <td class="penDate"></td>
+                                <td id="penBP3"></td>
+                                <td class="orange" id="penBV3"></td>
                             </tr>
-                            </tbody>
-                            <tbody>
                             <tr>
-                                <td>10:09</td>
-                                <td>10122.0</td>
-                                <td class="orange">10</td>
+                                <td class="penDate"></td>
+                                <td id="penBP4"></td>
+                                <td class="orange" id="penBV4"></td>
                             </tr>
-                            </tbody>
-                            <tbody>
                             <tr>
-                                <td>10:09</td>
-                                <td>10122.0</td>
-                                <td class="orange">10</td>
+                                <td class="penDate"></td>
+                                <td id="penBP5"></td>
+                                <td class="orange" id="penBV5"></td>
                             </tr>
                             </tbody>
                         </table>
@@ -186,8 +178,8 @@
                 </div>
             </div>
             <div class="pen-price">
-                <a href="trendPen.html" class="pen">笔</a>
-                <a href="trendPrice.html">价</a>
+                <a href="#" class="pen">笔</a>
+                <a href="#">价</a>
             </div>
         </div>
     </div>
@@ -219,7 +211,13 @@
             </div>
         </div>
         <div class="time">
-            <img src="../../images/xinhao.png" class="signal">
+            <div class="signal">
+                <div class="signal0 bg-green"></div>
+                <div class="signal1 bg-green"></div>
+                <div class="signal2 bg-green"></div>
+                <div class="signal3 bg-green"></div>
+                <div class="signal4 bg-green"></div>
+            </div>
             <span id="time" class="white"></span>
             <img src="../../images/guanbi1.png" class="timeClose">
         </div>

@@ -9,12 +9,32 @@ function prevent(event) {
         window.event.cancelBubble = true;
     }
 }
+//信号
+function signal4() {
+    $('.signal4').removeClass('bg-green');
+}
+function signal3() {
+    $('.signal4').removeClass('bg-green');
+    $('.signal3').removeClass('bg-green');
+}
+function addSignal3() {
+    $('.signal3').addClass('bg-green');
+}
+function addSignal4() {
+    $('.signal4').addClass('bg-green');
+    $('.signal3').addClass('bg-green');
+}
+setInterval(signal4, 55000);
+setInterval(signal3, 35000);
+setInterval(addSignal3, 3000);
+setInterval(addSignal4, 2000);
+
 // 实时显示时间
 function showTime() {
     let time = new Date();
-    let h = time.getHours();
-    let m = time.getMinutes();
-    let s = time.getSeconds();
+    let h = (time.getHours() < 10 ? '0' + (time.getHours()) : time.getHours());
+    let m = (time.getMinutes() < 10 ? '0' + (time.getMinutes()) : time.getMinutes());
+    let s = (time.getSeconds() < 10 ? '0' + (time.getSeconds()) : time.getSeconds());
     let myTime = h + ':' + m + ':' + s;
     $('#time').text(myTime);
 }
@@ -77,21 +97,20 @@ let footers = localStorage.getItem('footers');
 let hight = document.documentElement.clientHeight;
 let width = document.documentElement.clientWidth;
 var kLineW, kLineH;
-if(width === 1216) {
+if(width < 1400) {
     $('.header').css('height', '50px');
-    $('.k-chart').css('width', '986px');
     $('footer').css('height', '285px');
-    kLineW = 986;
+    kLineW = width - 230;
     if(footers) {
-        $('.main').css('height', '477px');
-        kLineH = 437;
+        $('.main').css('height', (hight-335) + 'px');
+        kLineH = hight-375;
         $('.details').show();
         $('.footer-main').show();
         $('main').removeClass('height85');
         $('footer').show();
     }else {
-        $('.main').css('height', '757px');
-        kLineH = 717;
+        $('.main').css('height', (hight-50) + 'px');
+        kLineH = hight-90;
         $('.details').hide();
         $('.footer-main').hide();
         $('main').css('height', '969px');
@@ -100,21 +119,20 @@ if(width === 1216) {
     }
 } else {
     $('.header').css('height', '55px');
-    $('.k-chart').css('width', '1132px');
     $('footer').css('height', '310px');
-    kLineW = 1132;
+    kLineW = width - 230;
     if(footers) {
-        $('.main').css('height', '659px');
-        kLineH = 619;
+        $('.main').css('height', (hight-365) + 'px');
+        kLineH = hight-405;
         $('.details').show();
         $('.footer-main').show();
         $('main').removeClass('height85');
         $('footer').show();
     }else {
-        kLineH = 929;
+        kLineH = hight-95;
         $('.details').hide();
         $('.footer-main').hide();
-        $('main').css('height', '969px');
+        $('main').css('height', (hight-55) + 'px');
         $('footer').hide();
         $('.table-box').css('height', '879px')
     }
