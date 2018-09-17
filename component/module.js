@@ -93,9 +93,15 @@ $(document).click(function () {
 });
 
 let footers = localStorage.getItem('footers');
-//判断客户端大小
-let hight = document.documentElement.clientHeight;
-let width = document.documentElement.clientWidth;
+//监听客户端大小
+let hight = $(window).height();
+let width = $(window).width();
+$(window).resize(function () {
+    var width0 = ($(window).width());
+    if(width0 !== width) {
+        window.location.reload()
+    }
+});
 var kLineW, kLineH;
 if(width < 1400) {
     $('.header').css('height', '50px');

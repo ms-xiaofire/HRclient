@@ -54,6 +54,10 @@ $('#kline_container').on('click', 'div div div ul li a', function () {
         sessionStorage.setItem('lineTime', 'day');
         window.location.reload();
     }
+    if(time === '分时') {
+        sessionStorage.setItem('lineTime', 'min,1');
+        window.location.reload();
+    }
 });
 
 // K线图
@@ -67,7 +71,7 @@ var kline = new Kline({
     symbol: "coin5/coin4",
     symbolName: "COIN5_COIN4",
     type: "poll", // poll/socket
-    url: "http://dt.jctytech.com/stock.php?u=17611002316&type=kline&num=1000" + '&line='+ lineTime + '&symbol=' + symbol1,
+    url: "http://dt.jctytech.com/stock.php?u=jurunjob&type=kline&num=1000" + '&line='+ lineTime + '&symbol=' + symbol1,
     limit: 1000,
     intervalTime: 5000,
     debug: false,
@@ -83,7 +87,7 @@ if(style === 0) {
 }
 //K线图右侧详细信息
 function newDate() {
-    $.get('http://dt.jctytech.com/stock.php?u=17611002316&type=stock&market=' + symbol1, function (data) {
+    $.get('http://dt.jctytech.com/stock.php?u=jurunjob&type=stock&market=' + symbol1, function (data) {
         $('#symbolName').text(data[0].Name);
         $('#SP1').text(data[0].SP1);
         $('#SV1').text(data[0].SV1);
@@ -93,9 +97,11 @@ function newDate() {
         $('#Vol2').text(data[0].Vol2);
         var upDown = data[0].NewPrice - data[0].Open;
         if(upDown < 0) {
-            $('#upDown').addClass('#lightBlue')
+            $('#upDown').addClass('lightBlue')
+            $('#NewPrice').addClass('lightBlue')
         }else {
             $('#upDown').addClass('red')
+            $('#NewPrice').addClass('red')
         }
         $('#upDown').text((upDown).toFixed(3));
         $('#LastClose').text(data[0].LastClose);
@@ -114,14 +120,6 @@ function newDate() {
         $('.penDate').text(penDate);
         $('#penBP1').text(data[0].BP1);
         $('#penBV1').text(data[0].BV1);
-        $('#penBP2').text(data[0].BP2);
-        $('#penBV2').text(data[0].BV2);
-        $('#penBP3').text(data[0].BP3);
-        $('#penBV3').text(data[0].BV3);
-        $('#penBP4').text(data[0].BP4);
-        $('#penBV4').text(data[0].BV4);
-        $('#penBP5').text(data[0].BP5);
-        $('#penBV5').text(data[0].BV5);
     });
 }
-setInterval(newDate, 5000);
+setInterval(newDate, 1000);

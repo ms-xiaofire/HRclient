@@ -3965,13 +3965,23 @@ ChartManager.prototype.showCursor = function (cursor) {
     this._mainCanvas.style.cursor = cursor;
     this._overlayCanvas.style.cursor = cursor;
 };
+//隐藏鼠标
 ChartManager.prototype.hideCursor = function () {
-    this._mainCanvas.style.cursor = 'none';
-    this._overlayCanvas.style.cursor = 'none';
+    // this._mainCanvas.style.cursor = 'none';
+    // this._overlayCanvas.style.cursor = 'none';
 };
+//双击十字光标
+var cross;
+$('#kline_container').dblclick(function () {
+    if(cross === 1) {
+        cross = 0;
+    }else {
+        cross = 1;
+    }
+});
 ChartManager.prototype.showCrossCursor = function (area, x, y) {
     var e = this.getRange(area.getName());
-    if (e != undefined) {
+    if (e != undefined && cross === 1) {
         e.selectAt(y);
         e = this.getTimeline(area.getDataSourceName());
         if (e != undefined)
@@ -9484,12 +9494,31 @@ function on_size(w, h) {
 
     KlineIns.onResize(width, height);
 }
-
+//鼠标滚轮放大缩小
 function mouseWheel(e, delta) {
     ChartManager.getInstance().scale(delta > 0 ? 1 : -1);
     ChartManager.getInstance().redraw("All", true);
     return false;
 }
+//键盘上下放大缩小
+$(document).keydown(function (e, delta) {
+    e = window.event;
+    let keycode = e.which ? e.which : e.keyCode;
+    if(keycode === 38) {
+        ChartManager.getInstance().scale( 1 );
+        ChartManager.getInstance().redraw("All", true);
+        return false;
+    }
+});
+$(document).keydown(function (e) {
+    e = window.event;
+    let keycode = e.which ? e.which : e.keyCode;
+    if(keycode === 40) {
+        ChartManager.getInstance().scale( -1 );
+        ChartManager.getInstance().redraw("All", true);
+        return false;
+    }
+});
 
 function switch_theme(name) {
 
