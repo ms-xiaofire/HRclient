@@ -22,39 +22,39 @@ var symbol1 = 'NENGH0';
 var lineTime = sessionStorage.getItem('lineTime');
 $('#kline_container').on('click', 'div div div ul li a', function () {
     var time = $(this).text();
-    if(time === '1分钟') {
+    if(time === '1分钟' || time === '1m') {
         sessionStorage.setItem('lineTime', 'min,1');
         window.location.reload();
     }
-    if(time === '5分钟') {
+    if(time === '5分钟' || time === '5m') {
         sessionStorage.setItem('lineTime', 'min,5');
         window.location.reload();
     }
-    if(time === '10分钟') {
+    if(time === '10分钟' || time === '10m') {
         sessionStorage.setItem('lineTime', 'min,10');
         window.location.reload();
     }
-    if(time === '15分钟') {
+    if(time === '15分钟' || time === '15m') {
         sessionStorage.setItem('lineTime', 'min,15');
         window.location.reload();
     }
-    if(time === '30分钟') {
+    if(time === '30分钟' || time === '30m') {
         sessionStorage.setItem('lineTime', 'min,30');
         window.location.reload();
     }
-    if(time === '1小时') {
+    if(time === '1小时' || time === '1小時' || time === '1h') {
         sessionStorage.setItem('lineTime', 'min,60');
         window.location.reload();
     }
-    if(time === '2小时') {
+    if(time === '2小时' || time === '2小時' || time === '2h') {
         sessionStorage.setItem('lineTime', 'min,120');
         window.location.reload();
     }
-    if(time === '日线') {
+    if(time === '日线' || time === '日線' || time === '1d') {
         sessionStorage.setItem('lineTime', 'day');
         window.location.reload();
     }
-    if(time === '分时') {
+    if(time === '分时' || time === '分時' || time === 'Line') {
         sessionStorage.setItem('lineTime', 'min,1');
         window.location.reload();
     }
@@ -85,6 +85,8 @@ if(style === 0) {
 }else {
     kline.setTheme("dark");
 }
+
+
 //K线图右侧详细信息
 function newDate() {
     $.get('http://dt.jctytech.com/stock.php?u=jurunjob&type=stock&market=' + symbol1, function (data) {
@@ -123,3 +125,8 @@ function newDate() {
     });
 }
 setInterval(newDate, 1000);
+
+$('#demo').on('DOMNodeInserted', function () {
+    var demo = $('#demo').text();
+    console.log(demo);
+});

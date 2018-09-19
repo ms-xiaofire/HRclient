@@ -69,24 +69,34 @@
             <li><a href="#" class="white">放大</a></li>
             <li><a href="#" class="white">缩小</a></li>
             <li><a href="#" class="white">报价</a></li>
-            <li><a href="trendPen.html" class="white">走势图</a></li>
             <li><a href="K-chart.html" class="white" id="KLine">K线图</a></li>
-            <li><a href="K-chart.html" class="white" id="dayLine">日线</a></li>
-            <li><a href="K-chart.html" class="white" id="weekLine">周线</a></li>
-            <li><a href="K-chart.html" class="white" id="monthLine">月线</a></li>
-            <li><a href="K-chart.html" class="white" id="yearLine">年线图</a></li>
-            <li><a href="K-chart.html" class="white" id="oneMin">1分钟</a></li>
-            <li><a href="K-chart.html" class="white">3分钟</a></li>
-            <li><a href="K-chart.html" class="white" id="fiveMin">5分钟</a></li>
-            <li><a href="K-chart.html" class="white" id="tenMin">10分钟</a></li>
-            <li><a href="K-chart.html" class="white" id="fifteenMin">15分钟</a></li>
-            <li><a href="K-chart.html" class="white" id="thirtyMin">30分钟</a></li>
             <li><a href="penNum.html" class="white">分笔</a></li>
             <li><a href="priceNum.html" class="white">分价</a></li>
         </ul>
     </div>
     <div class="chart-box">
         <div class="k-chart">
+            <div id="cross" class="crossNone">
+                <span>时间</span>
+                <div id="crossTime"></div>
+                <span>开盘</span>
+                <p id="crossOpen" class="red"></p>
+                <span>最高</span>
+                <p id="crossHigh"></p>
+                <span>最低</span>
+                <p id="crossLow"></p>
+                <span>收盘</span>
+                <p id="crossClose"></p>
+                <span>涨跌幅</span>
+                <div class="crossPriceChange">
+                    <p id="crossPriceChange"></p><span>%</span>
+                </div>
+                <span>振幅</span>
+                <div class="crossAmplitude">
+                    <p id="crossAmplitude"></p><span>%</span>
+                </div>
+            </div>
+            <!--双击展示信息-->
             <div id="kline_container"></div>
         </div>
         <div class="chart-details">

@@ -3978,6 +3978,7 @@ $('#kline_container').dblclick(function () {
     }else {
         cross = 1;
     }
+    $('#cross').toggleClass('crossNone');
 });
 ChartManager.prototype.showCrossCursor = function (area, x, y) {
     var e = this.getRange(area.getName());
@@ -6158,8 +6159,6 @@ MainInfoPlotter.prototype.Draw = function (context) {
     } else {
         var amplitude = 0.00;
     }
-
-
     if (lang == "zh-cn") {
         if (!Plotter.drawString(context, '  振幅: ' + amplitude.toFixed(2) + ' %', rect))
             return;
@@ -6176,6 +6175,67 @@ MainInfoPlotter.prototype.Draw = function (context) {
         if (!Plotter.drawString(context, '  量: ' + data.volume.toFixed(2), rect))
             return;
     }
+
+    //十字光标相关信息
+    $('#crossTime').text(year + '-' + month + '-' + date + '  ' + hour + ':' + minute);
+    $('#crossOpen').text(data.open.toFixed(digits));
+    $('#crossHigh').text(data.high.toFixed(digits));
+    $('#crossLow').text(data.low.toFixed(digits));
+    $('#crossClose').text(data.close.toFixed(digits));
+    $('#crossPriceChange').text(change);
+    $('#crossAmplitude').text(amplitude.toFixed(2));
+    $('#crossHigh').on('DOMNodeInserted', function () {
+        var high = $(this).text();
+        var open = $('#crossOpen').text();
+        if((high - open) >= 0) {
+            $(this).removeClass('green');
+            $(this).addClass('red');
+        }else {
+            $(this).removeClass('red');
+            $(this).addClass('green');
+        }
+    });
+    $('#crossLow').on('DOMNodeInserted', function () {
+        var low = $(this).text();
+        var open = $('#crossOpen').text();
+        if((low - open) >= 0) {
+            $(this).removeClass('green');
+            $(this).addClass('red');
+        }else {
+            $(this).removeClass('red');
+            $(this).addClass('green');
+        }
+    });
+    $('#crossClose').on('DOMNodeInserted', function () {
+        var close = $(this).text();
+        var open = $('#crossOpen').text();
+        if((close - open) >= 0) {
+            $(this).removeClass('green');
+            $(this).addClass('red');
+        }else {
+            $(this).removeClass('red');
+            $(this).addClass('green');
+        }
+    });
+    $('#crossPriceChange').on('DOMNodeInserted', function () {
+        if($(this).text() >= 0) {
+            $('.crossPriceChange').removeClass('green');
+            $('.crossPriceChange').addClass('red');
+        }else {
+            $('.crossPriceChange').removeClass('red');
+            $('.crossPriceChange').addClass('green');
+        }
+    });
+    $('#crossAmplitude').on('DOMNodeInserted', function () {
+        if($(this).text() >= 0) {
+            $('.crossAmplitude').removeClass('green');
+            $('.crossAmplitude').addClass('red');
+        }else {
+            $('.crossAmplitude').removeClass('red');
+            $('.crossAmplitude').addClass('green');
+        }
+    });
+
     var dp = mgr.getDataProvider(this.getAreaName() + ".secondary");
     if (dp == undefined)
         return;

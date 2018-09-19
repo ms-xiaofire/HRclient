@@ -1,34 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <title>eCharts demo</title>
+    <style>
+        #menu{
+            width: 125px;
+            height: 54px;
+            box-sizing: border-box;
+            /*overflow: hidden;*/
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        .menuUl{
+            padding: 2px;
+            font-size: 14px;
+            border-radius: 3px;
+            border: 1px solid #8f8f8f;
+            background: #fff;
+            margin: 0;
+            list-style: none;
+        }
+        .menu{
+            width: 100%;
+            height: 24px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+        }
+        .menu em {
+            width: 24px;
+            height: 24px;
+            background: #eaead7;
+            display: block;
+        }
+        .menu a {
+            width: 70px;
+            color: #333;
+            background: #fff;
+            padding-left: 5px;
+            text-decoration: none;
+            display: block;
+        }
+        .rightMenu {
+            width: 125px;
+            padding: 2px;
+            font-size: 14px;
+            border: 1px solid #8f8f8f;
+            border-radius: 3px;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+            position: absolute;
+            display: none;
+            left: 125px;
+            top: 0;
+        }
+        .rightMenu li {
+            display: flex;
+            align-items: center;
+        }
+        .rightMenu li a {
+            flex: 1;
+            cursor: pointer;
+        }
+        .artIndex:hover .rightMenu {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
-<div class="tradingview-widget-container">
-    <div id="tradingview_ba529"></div>
-    <div class="tradingview-widget-copyright"><a href="https://cn.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL图表</span></a>由TradingView提供</div>
-    <script type="text/javascript" src="tv.js"></script>
-    <script type="text/javascript">
-        new TradingView.widget(
-            {
-                "width": 980,
-                "height": 610,
-                "symbol": "NASDAQ:AAPL",
-                "interval": "D",
-                "timezone": "Etc/UTC",
-                "theme": "Light",
-                "style": "1",
-                "locale": "zh_CN",
-                "toolbar_bg": "#f1f3f6",
-                "enable_publishing": false,
-                "allow_symbol_change": true,
-                "container_id": "tradingview_ba529"
-            }
-        );
-    </script>
+<div id="menu">
+    <ul class="menuUl">
+        <li class="menu"><em class="cut"></em><a href="#">画线工具</a></li>
+        <li class="menu artIndex">
+            <em class="copy"></em>
+            <a href="#">技术指标</a>
+            <img src="../images/rightMenu.png">
+            <ul class="rightMenu">
+                <li><em class="cut"></em><a name="MACD">MACD</a></li>
+                <li><em class="cut"></em><a name="KDJ">KDJ</a></li>
+                <li><em class="cut"></em><a name="StochRSI">StochRSI</a></li>
+                <li><em class="cut"></em><a name="RSI">RSI</a></li>
+                <li><em class="cut"></em><a name="DMI">DMI</a></li>
+                <li><em class="cut"></em><a name="OBV">OBV</a></li>
+                <li><em class="cut"></em><a name="BOLL">BOLL</a></li>
+                <li><em class="cut"></em><a name="SAR">SAR</a></li>
+                <li><em class="cut"></em><a name="DMA">DMA</a></li>
+                <li><em class="cut"></em><a name="TRIX">TRIX</a></li>
+                <li><em class="cut"></em><a name="BRAR">BRAR</a></li>
+                <li><em class="cut"></em><a name="VR">VR</a></li>
+                <li><em class="cut"></em><a name="EMV">EMV</a></li>
+                <li><em class="cut"></em><a name="WR">WR</a></li>
+                <li><em class="cut"></em><a name="ROC">ROC</a></li>
+                <li><em class="cut"></em><a name="MTM">MTM</a></li>
+                <li><em class="cut"></em><a name="PSY">PSY</a></li>
+            </ul>
+        </li>
+    </ul>
 </div>
 
+<script>
+    window.oncontextmenu=function(e){
+//取消默认的浏览器自带右键 很重要！！
+        e.preventDefault();
+
+//获取我们自定义的右键菜单
+        var menu=document.querySelector("#menu");
+
+//根据事件对象中鼠标点击的位置，进行定位
+        menu.style.left=e.clientX+'px';
+        menu.style.top=e.clientY+'px';
+
+    };
+    //关闭右键菜单，很简单
+    window.onclick=function(e){
+        var menu=document.querySelector("#menu");
+//用户触发click事件就可以关闭了，因为绑定在window上，按事件冒泡处理，不会影响菜单的功能
+        menu.style.left= -9999 + 'px';
+        menu.style.top= -9999 + 'px';
+    }
+</script>
 </body>
 </html>
