@@ -112,8 +112,9 @@ if(width < 1400) {
         kLineH = hight-375;
         $('.details').show();
         $('.footer-main').show();
-        $('main').removeClass('height85');
         $('footer').show();
+        $('.table-box').css('height', '527px');
+        $('.optional').css('height', '567px');
     }else {
         $('.main').css('height', (hight-50) + 'px');
         kLineH = hight-90;
@@ -121,7 +122,8 @@ if(width < 1400) {
         $('.footer-main').hide();
         $('main').css('height', '969px');
         $('footer').hide();
-        $('.table-box').css('height', '929px')
+        $('.table-box').css('height', '812px');
+        $('.optional').css('height', '852px');
     }
 } else {
     $('.header').css('height', '55px');
@@ -134,13 +136,16 @@ if(width < 1400) {
         $('.footer-main').show();
         $('main').removeClass('height85');
         $('footer').show();
+        $('.table-box').css('height', '497px');
+        $('.optional').css('height', '537px');
     }else {
         kLineH = hight-95;
         $('.details').hide();
         $('.footer-main').hide();
         $('main').css('height', (hight-55) + 'px');
         $('footer').hide();
-        $('.table-box').css('height', '879px')
+        $('.table-box').css('height', '807px')
+        $('.optional').css('height', '847px');
     }
 }
 //隐藏底部

@@ -20,6 +20,9 @@ function penData(penData) {
 //获取产品名字
 var symbol1 = 'NENGH0';
 var lineTime = sessionStorage.getItem('lineTime');
+if(lineTime === null) {
+    lineTime = 'day';
+}
 $('#kline_container').on('click', 'div div div ul li a', function () {
     var time = $(this).text();
     if(time === '1分钟' || time === '1m') {
@@ -59,23 +62,41 @@ $('#kline_container').on('click', 'div div div ul li a', function () {
         window.location.reload();
     }
 });
-
+//设置语言
+$('#kline_container').on('click', 'div div div div ul li a', function () {
+    var text = $(this).text();
+    if(text === '简体中文(zh-CN)') {
+        sessionStorage.setItem('language', 'zh-cn');
+    }
+    if(text === 'English(en-US)') {
+        sessionStorage.setItem('language', 'en-us');
+    }
+    if(text === '繁體中文(zh-HK)') {
+        sessionStorage.setItem('language', 'zh-tw');
+    }
+});
+var languages = 'zh-cn';
+var languageSet = sessionStorage.getItem('language');
+if(languageSet) {
+    languages = languageSet;
+}
 // K线图
 var kline = new Kline({
     element: "#kline_container",
     width: kLineW,
     height: kLineH,
     theme: 'dark', // light/dark
-    language: 'zh-cn', // zh-cn/en-us/zh-tw
+    language: languages, // zh-cn/en-us/zh-tw
     ranges: ["1d", "2h", "1h", "30m", "15m", "10m", "5m", "1m", "line"],
     symbol: "coin5/coin4",
     symbolName: "COIN5_COIN4",
-    type: "poll", // poll/socket
+    type: "poll", // poll/stomp
     url: "http://dt.jctytech.com/stock.php?u=jurunjob&type=kline&num=1000" + '&line='+ lineTime + '&symbol=' + symbol1,
     limit: 1000,
     intervalTime: 5000,
     debug: false,
     showTrade: true,
+    reverseColor: false
 });
 kline.draw();
 kline.toggleTrade();
@@ -99,11 +120,15 @@ function newDate() {
         $('#Vol2').text(data[0].Vol2);
         var upDown = data[0].NewPrice - data[0].Open;
         if(upDown < 0) {
-            $('#upDown').addClass('lightBlue')
-            $('#NewPrice').addClass('lightBlue')
+            $('#upDown').removeClass('red');
+            $('#NewPrice').removeClass('red');
+            $('#upDown').addClass('lightBlue');
+            $('#NewPrice').addClass('lightBlue');
         }else {
-            $('#upDown').addClass('red')
-            $('#NewPrice').addClass('red')
+            $('#upDown').removeClass('lightBlue');
+            $('#NewPrice').removeClass('lightBlue');
+            $('#upDown').addClass('red');
+            $('#NewPrice').addClass('red');
         }
         $('#upDown').text((upDown).toFixed(3));
         $('#LastClose').text(data[0].LastClose);
@@ -126,7 +151,29 @@ function newDate() {
 }
 setInterval(newDate, 1000);
 
-$('#demo').on('DOMNodeInserted', function () {
-    var demo = $('#demo').text();
-    console.log(demo);
+
+//取消默认的浏览器自带右键 很重要！
+window.document.oncontextmenu = function(){
+    return false;
+};
+$('#kline_container').mousedown(function(e){
+    if(e.which === 3) {
+        //获取我们自定义的右键菜单
+        var menu=document.querySelector("#menuRight");
+        //根据事件对象中鼠标点击的位置，进行定位
+        menu.style.left=e.clientX+'px';
+        menu.style.top=e.clientY+'px';
+    }
 });
+//关闭右键菜单，很简单
+window.onclick=function(e){
+    var menu=document.querySelector("#menuRight");
+//用户触发click事件就可以关闭了，因为绑定在window上，按事件冒泡处理，不会影响菜单的功能
+    menu.style.left= -9999 + 'px';
+    menu.style.top= -9999 + 'px';
+};
+// $('.rightMenu li a').click(function () {
+//     var text = $(this).text();
+//     sessionStorage.setItem('indicName', text);
+//     window.location.reload();
+// });

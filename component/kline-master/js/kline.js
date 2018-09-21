@@ -4189,6 +4189,7 @@ ChartManager.prototype.unloadTemplate = function (frameName) {
     delete this._themes[frameName];
     delete this._frameMousePos[frameName];
 };
+
 ChartManager.prototype.createIndicatorAndRange = function (areaName, indicName, notLoadSettings) {
     var indic, range;
     switch (indicName) {
@@ -4275,6 +4276,7 @@ ChartManager.prototype.createIndicatorAndRange = function (areaName, indicName, 
         default:
             return null;
     }
+
     if (!notLoadSettings)
         indic.setParameters(ChartSettings.get().indics[indicName]);
     return {"indic": indic, "range": range};
@@ -8912,6 +8914,18 @@ function KLineMouseEvent() {
                     switch_indic('on');
                 }
             });
+        $('.rightMenu li a').click(function () {
+            $("#chart_tabbar li a").removeClass('selected');
+            $(this).addClass('selected');
+            var name = $(this).attr('name');
+            var tmp = ChartSettings.get();
+            tmp.charts.indics[1] = name;
+            ChartSettings.save();
+            if (Template.displayVolume == false)
+                ChartManager.getInstance().getChart().setIndicator(1, name);
+            else
+                ChartManager.getInstance().getChart().setIndicator(2, name);
+        });
         $("#chart_tabbar li a")
             .click(function () {
                 $("#chart_tabbar li a").removeClass('selected');
@@ -9222,7 +9236,6 @@ function requestOverHttp() {
                     return Y + M + D + h + m + s;
                 }
 
-
                 var data2 = [];
                 for (var i = 0; i < res.length; i++) {
                     data2.push(getdate(res[i].Date), res[i].Open, res[i].High, res[i].Low, res[i].Close, res[i].Volume);
@@ -9236,7 +9249,7 @@ function requestOverHttp() {
                         "lines": lines.reverse()
                     },
                     "success": true
-                }
+                };
                 if (KlineIns.G_HTTP_REQUEST) {
                     requestSuccessHandler(data0);
                 }

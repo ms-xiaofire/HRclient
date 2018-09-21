@@ -28,11 +28,11 @@
     /*position: relative;*/
 }
 /*右键菜单*/
-/*#menuRight{
+#menuRight{
     width: 125px;
     height: 54px;
     box-sizing: border-box;
-    !*overflow: hidden;*!
+    /*overflow: hidden;*/
     position: absolute;
     top: -9999px;
     left: -9999px;
@@ -95,7 +95,7 @@
 }
 .artIndex:hover .rightMenu {
     display: block;
-}*/
+}
 /*右键菜单 end*/
 #cross {
     width: 80px;

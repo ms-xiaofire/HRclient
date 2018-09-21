@@ -127,9 +127,6 @@ body {
 .nav a:hover, .nav a:focus {
     color: #3f51b5;
 }
-.table-box {
-    height: 569px;
-}
 .tables {
     padding: 10px;
 }
@@ -169,7 +166,7 @@ footer {
     overflow: hidden;
 }
 .exchange {
-    height: 50px;
+    height: 36px;
     margin: 0 -10px;
     overflow: hidden;
 }
@@ -183,7 +180,7 @@ footer {
     display: inline-block;
 }
 .exchange a {
-    padding: 16px 10px;
+    padding: 10px;
     font-size: 14px;
     display: block;
 }
