@@ -38,6 +38,9 @@
     border: 1px solid #8e8e8e;
     border-radius: 5px;
 }
+#withdrawal {
+    background-color: #009688;
+}
 /*弹窗*/
 /*设定签约银行*/
 .setBank {

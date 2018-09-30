@@ -172,8 +172,3 @@ window.onclick=function(e){
     menu.style.left= -9999 + 'px';
     menu.style.top= -9999 + 'px';
 };
-// $('.rightMenu li a').click(function () {
-//     var text = $(this).text();
-//     sessionStorage.setItem('indicName', text);
-//     window.location.reload();
-// });

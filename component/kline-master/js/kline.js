@@ -8890,6 +8890,15 @@ function KLineMouseEvent() {
             switch_symbol($(this).attr('name'));
         });
 
+        //画线工具
+        $('.menuTools').click(function () {
+            if ($(this).hasClass('selected')) {
+                switch_tools('off');
+            } else {
+                switch_tools('on');
+            }
+            $(this).toggleClass('selected');
+        });
         $('#chart_show_tools')
             .click(function () {
                 if ($(this).hasClass('selected')) {

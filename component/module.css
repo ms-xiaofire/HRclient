@@ -127,6 +127,10 @@ body {
 .nav a:hover, .nav a:focus {
     color: #3f51b5;
 }
+.table-box {
+    overflow-y: auto;
+    background-color: rgb(26, 26, 26);
+}
 .tables {
     padding: 10px;
 }
