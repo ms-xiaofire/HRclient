@@ -8880,6 +8880,29 @@ function KLineMouseEvent() {
                 switch_period($(this).parent().attr('name'));
 
             });
+
+        //当天0点0分0秒
+        var start = new Date(new Date(new Date().toLocaleDateString()).getTime());
+        var stTime = Date.parse(start)/1000;
+        //当天23点59分59秒
+        var end = new Date(new Date(new Date().toLocaleDateString()).getTime()+24*60*60*1000-1);
+        var etTime = Date.parse(end)/1000;
+        //当日分时图
+        $('#today').click(function () {
+            switch_period('line');
+            sessionStorage.setItem('lineTime', 'min,1');
+            sessionStorage.setItem('st', stTime);
+            sessionStorage.setItem('et', etTime);
+            window.location.reload();
+        });
+        //历史分时图
+        $('#history').click(function () {
+            switch_period('line');
+            sessionStorage.clear();
+            sessionStorage.setItem('lineTime', 'min,1');
+            window.location.reload();
+        });
+
         $("#chart_toolbar_periods_vert ul a").click(function () {
 
             switch_period($(this).parent().attr('name'));
@@ -9578,8 +9601,8 @@ function on_size(w, h) {
 }
 //鼠标滚轮放大缩小
 function mouseWheel(e, delta) {
-    ChartManager.getInstance().scale(delta > 0 ? 1 : -1);
-    ChartManager.getInstance().redraw("All", true);
+    // ChartManager.getInstance().scale(delta > 0 ? 1 : -1);
+    // ChartManager.getInstance().redraw("All", true);
     return false;
 }
 //键盘上下放大缩小

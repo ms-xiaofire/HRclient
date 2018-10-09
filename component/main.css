@@ -70,7 +70,7 @@
     text-decoration: none;
     display: block;
 }
-.rightMenu {
+.rightMenu, .history {
     width: 125px;
     padding: 2px;
     font-size: 14px;
@@ -85,15 +85,18 @@
     top: -27px;
     display: none;
 }
-.rightMenu li {
+.rightMenu li, .history li {
     display: flex;
     align-items: center;
 }
-.rightMenu li a {
+.rightMenu li a, .history li a {
     flex: 1;
     cursor: pointer;
 }
 .artIndex:hover .rightMenu {
+    display: block;
+}
+.historyIndex:hover .history {
     display: block;
 }
 /*右键菜单 end*/

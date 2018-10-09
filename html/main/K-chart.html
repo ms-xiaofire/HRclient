@@ -126,6 +126,15 @@
                             <li><em class="cut"></em><a name="PSY">PSY</a></li>
                         </ul>
                     </li>
+                    <li class="menuRight historyIndex">
+                        <em class="copy"></em>
+                        <a href="#">历史回忆</a>
+                        <img src="../../images/rightMenu.png">
+                        <ul class="history">
+                            <li><em class="cut"></em><a href="#" id="today">当日分时图</a></li>
+                            <li><em class="cut"></em><a href="#" id="history">历史分时图</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <!--右键菜单-->
@@ -796,6 +805,22 @@
     </div>
 </div>
 <!--关于 end-->
+
+<!--智能键盘-->
+<div id="moveBar-bg"></div>
+<div id="moveBar">
+    <div id="banner">
+        <span>智能键盘</span>
+        <img src="../../images/close.png" id="moveBar_close">
+    </div>
+    <div id="content">
+        <input type="text" oninput="search()">
+        <form>
+            <table id="article" border=0 cellpadding="0" cellspacing="0"></table>
+        </form>
+    </div>
+</div>
+<!--智能键盘 end-->
 
 <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
 <script src="../../component/kline-master/lib/jquery.mousewheel.js"></script>

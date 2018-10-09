@@ -1,106 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-    <meta charset="utf-8">
-    <title>eCharts demo</title>
-    <style>
-        body, ul, li {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font: 12px/24px arial;
-        }
-
-        #menu {
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>jquery实现div拖拽</title>
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <style type="text/css">
+        #moveBar {
             position: absolute;
-            top: -9999px;
-            left: -9999px;
-            width: 100px;
-            border-radius: 3px;
-            list-style-type: none;
-            border: 1px solid #8f8f8f;
-            padding: 2px;
-            background: #fff;
+            width: 200px;
+            height: 400px;
+            background: black;
+            color: white;
+            border: solid 1px #000;
         }
-
-        #menu li {
-            position: relative;
-            height: 24px;
-            padding-left: 24px;
-            background: #eaead7;
-            vertical-align: top;
-        }
-
-        #menu li a {
-            display: block;
-            color: #333;
-            background: #fff;
-            padding-left: 5px;
-            text-decoration: none;
-        }
-
-        #menu li.active {
-            background: #999;
-        }
-
-        #menu li.active a {
-            color: #fff;
-            background: #8f8f8f;
-        }
-
-        #menu li em {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 24px;
-            height: 24px;
-            background: url(img/ico.png) no-repeat;
-        }
-
-        #menu li em.cur {
-            background-position: 0 0;
-        }
-
-        #menu li em.copy {
-            background-position: 0 -24px;
-        }
-
-        #menu li em.paste {
-            background-position: 0 -48px;
+        #banner {
+            background: #ddd;
+            cursor: move;
         }
     </style>
 </head>
 <body>
-
-
-<center>自定义右键菜单，请在页面点击右键查看效果。</center>
-<ul id="menu">
-    <li class=""><em class="cut"></em><a href="javascript:;">剪切</a></li>
-    <li class=""><em class="copy"></em><a href="javascript:;">复制</a></li>
-    <li class=""><em class="paste"></em><a href="javascript:;">粘贴</a></li>
-</ul>
-
+<div id="moveBar">
+    <div id="banner">按住鼠标移动当前div</div>
+    <div id="content">内容部分</div>
+</div>
 <script>
-window.onload = function(){
-    var ul = document.getElementById("menu"); //获取ul节点对象
-    /*为document绑定鼠标右键菜单事件*/
-    document.oncontextmenu = function(e){
-        var _event = window.event||e;  //事件对象
-        var x  = _event.clientX; // 鼠标的x坐标
-        var y =  _event.clientY; //鼠标的y坐标
+    $(function () {
+        dragPanelMove("#banner","#moveBar");
+        function dragPanelMove(downDiv,moveDiv){
+            $(downDiv).mousedown(function (e) {
+                var isMove = true;
+                var div_x = e.pageX - $(moveDiv).offset().left;
+                var div_y = e.pageY - $(moveDiv).offset().top;
+                $(document).mousemove(function (e) {
+                    if (isMove) {
+                        var obj = $(moveDiv);
+                        obj.css({"left":e.pageX - div_x, "top":e.pageY - div_y});
+                    }
+                }).mouseup(
+                    function () {
+                        isMove = false;
+                    });
+            });
 
-        ul.style.left = x + "px";  //改变ul的坐标
-        ul.style.top = y  + "px";
-        //阻止默认行为
-        if(_event.preventDefault){
-            _event.preventDefault();  //标准格式
-        }else{
-            _event.returnValue = false; //IE格式
         }
-    }
-}
+
+    });
 </script>
 </body>
 </html>

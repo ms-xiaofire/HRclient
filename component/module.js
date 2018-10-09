@@ -9,6 +9,8 @@ function prevent(event) {
         window.event.cancelBubble = true;
     }
 }
+//禁止鼠标选中文本
+document.onselectstart = function(){return false;}
 //信号
 function signal4() {
     $('.signal4').removeClass('bg-green');
@@ -108,20 +110,19 @@ if(width < 1300) {
     $('footer').css('height', '285px');
     kLineW = width - 230;
     if(footers) {
-        $('.main').css('height', (hight-335) + 'px');
+        $('.main').css('min-height', (hight-335) + 'px');
         kLineH = hight-375;
         $('.details').show();
         $('.footer-main').show();
         $('footer').show();
-        $('.table-box').css('height', (hight-411) + 'px');
+        $('.table-box').css('min-height', (hight-411) + 'px');
     }else {
-        $('.main').css('height', (hight-50) + 'px');
+        $('.main').css('min-height', (hight-50) + 'px');
         kLineH = hight-90;
         $('.details').hide();
         $('.footer-main').hide();
-        $('main').css('height', '969px');
         $('footer').hide();
-        $('.table-box').css('height', (hight-126) + 'px');
+        $('.table-box').css('min-height', (hight-126) + 'px');
     }
 } else {
     $('.header').css('height', '55px');
@@ -222,6 +223,66 @@ $('#about').click(function () {
 $('.about-close').click(function () {
     $('#dim').removeClass('dim');
     $('.about').hide();
+});
+//智能键盘
+$(document).keydown(function (e) {
+    e = window.event;
+    let keycode = e.which ? e.which : e.keyCode;
+    if(keycode >= 48 && keycode <= 111) {
+        $('#moveBar-bg').addClass('moveBar-bg');
+        $('#moveBar').show();
+    }
+});
+//关闭智能键盘
+$('#moveBar_close').click(function () {
+    $('#moveBar-bg').removeClass('moveBar-bg');
+    $('#moveBar').hide();
+});
+//移动智能键盘
+$(function () {
+    dragPanelMove("#banner","#moveBar");
+    function dragPanelMove(downDiv,moveDiv){
+        $(downDiv).mousedown(function (e) {
+            var isMove = true;
+            var div_x = e.pageX - $(moveDiv).offset().left;
+            var div_y = e.pageY - $(moveDiv).offset().top;
+            $(document).mousemove(function (e) {
+                if (isMove) {
+                    var obj = $(moveDiv);
+                    obj.css({"left":e.pageX - div_x, "top":e.pageY - div_y});
+                }
+            }).mouseup(
+                function () {
+                    isMove = false;
+                });
+        });
+
+    }
+
+});
+//搜索
+function search() {
+    console.log('搜索合约');
+    $('#article').text('');
+    // $.get();
+    $('#article').html(
+        '<tr>' +
+            '<td>test</td>' +
+            '<td>测试</td>' +
+        '</tr>'
+    );
+}
+//选择合约
+$('#article').on('click', 'tr', function () {
+    $('#article tr').removeClass('article-bg');
+    $(this).addClass('article-bg');
+});
+//双击关闭
+$('#article').on('dblclick', 'tr', function () {
+    var text = $(this).find('td').eq(0).text();
+    console.log(text);
+    $('#moveBar-bg').removeClass('moveBar-bg');
+    $('#moveBar').hide();
 });
 
 //快捷键

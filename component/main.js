@@ -16,6 +16,12 @@ function penData(penData) {
     M = (penDate.getMinutes() < 10 ? '0' + penDate.getMinutes() : penDate.getMinutes());
     return H + M;
 }
+//当天0点0分0秒
+start = new Date(new Date(new Date().toLocaleDateString()).getTime());
+stTime = Date.parse(start)/1000;
+//当天23点59分59秒
+end = new Date(new Date(new Date().toLocaleDateString()).getTime()+24*60*60*1000-1);
+etTime = Date.parse(end)/1000;
 
 //获取产品名字
 var symbol1 = 'NENGH0';
@@ -26,39 +32,50 @@ if(lineTime === null) {
 $('#kline_container').on('click', 'div div div ul li a', function () {
     var time = $(this).text();
     if(time === '1分钟' || time === '1m') {
+        sessionStorage.clear();
         sessionStorage.setItem('lineTime', 'min,1');
         window.location.reload();
     }
     if(time === '5分钟' || time === '5m') {
+        sessionStorage.clear();
         sessionStorage.setItem('lineTime', 'min,5');
         window.location.reload();
     }
     if(time === '10分钟' || time === '10m') {
         sessionStorage.setItem('lineTime', 'min,10');
+        sessionStorage.clear('st');
+        sessionStorage.clear('et');
         window.location.reload();
     }
     if(time === '15分钟' || time === '15m') {
+        sessionStorage.clear();
         sessionStorage.setItem('lineTime', 'min,15');
         window.location.reload();
     }
     if(time === '30分钟' || time === '30m') {
+        sessionStorage.clear();
         sessionStorage.setItem('lineTime', 'min,30');
         window.location.reload();
     }
     if(time === '1小时' || time === '1小時' || time === '1h') {
+        sessionStorage.clear();
         sessionStorage.setItem('lineTime', 'min,60');
         window.location.reload();
     }
     if(time === '2小时' || time === '2小時' || time === '2h') {
+        sessionStorage.clear();
         sessionStorage.setItem('lineTime', 'min,120');
         window.location.reload();
     }
     if(time === '日线' || time === '日線' || time === '1d') {
+        sessionStorage.clear();
         sessionStorage.setItem('lineTime', 'day');
         window.location.reload();
     }
     if(time === '分时' || time === '分時' || time === 'Line') {
         sessionStorage.setItem('lineTime', 'min,1');
+        sessionStorage.setItem('st', stTime);
+        sessionStorage.setItem('et', etTime);
         window.location.reload();
     }
 });
@@ -80,6 +97,17 @@ var languageSet = sessionStorage.getItem('language');
 if(languageSet) {
     languages = languageSet;
 }
+//分时图默认只看当天的数据
+var st = '';
+var et = '';
+var stStar = sessionStorage.getItem('st');
+var etEnd = sessionStorage.getItem('et');
+if(stStar) {
+    st = '&st=' + stStar;
+}
+if(etEnd) {
+    et = '&et=' + etEnd;
+}
 // K线图
 var kline = new Kline({
     element: "#kline_container",
@@ -91,7 +119,7 @@ var kline = new Kline({
     symbol: "coin5/coin4",
     symbolName: "COIN5_COIN4",
     type: "poll", // poll/stomp
-    url: "http://dt.jctytech.com/stock.php?u=jurunjob&type=kline&num=1000" + '&line='+ lineTime + '&symbol=' + symbol1,
+    url: "http://dt.jctytech.com/stock.php?u=jurunjob&type=kline&num=2000" + '&line='+ lineTime + '&symbol=' + symbol1 + st + et,
     limit: 1000,
     intervalTime: 5000,
     debug: false,
