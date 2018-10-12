@@ -262,15 +262,30 @@ $(function () {
 });
 //搜索
 function search() {
-    console.log('搜索合约');
-    $('#article').text('');
-    // $.get();
-    $('#article').html(
-        '<tr>' +
-            '<td>test</td>' +
-            '<td>测试</td>' +
-        '</tr>'
-    );
+    $('#article').html('');
+    var keyword = $('#search').val();
+    var url = 'http://hengrui.jinjifuweng.com/index.php/Exchanges/find_contracts';
+    $.ajax({
+        method: 'get',
+        url: url,
+        data:{code: keyword},
+        dataType: 'json',
+        success: function (data) {
+            var list = data;
+            var trs=[];
+            var trDom;
+            for(var i=0; i<list.length; i++) {
+                trDom = $('<tr></tr>');
+                $('<td>'+list[i].code+'</td>').appendTo(trDom);
+                $('<td>'+list[i].name+'</td>').appendTo(trDom);
+                trs.push(trDom);
+            }
+            for(var j=0;j<trs.length;j++){
+                $(trs[j]).appendTo($('#article'));
+            }
+        }
+    });
+
 }
 //选择合约
 $('#article').on('click', 'tr', function () {

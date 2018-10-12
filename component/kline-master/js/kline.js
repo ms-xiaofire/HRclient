@@ -8898,7 +8898,8 @@ function KLineMouseEvent() {
         //历史分时图
         $('#history').click(function () {
             switch_period('line');
-            sessionStorage.clear();
+            sessionStorage.removeItem('st');
+            sessionStorage.removeItem('et');
             sessionStorage.setItem('lineTime', 'min,1');
             window.location.reload();
         });
@@ -9744,6 +9745,9 @@ function switch_period(name) {
     ChartManager.getInstance().showCursor();
     calcPeriodWeight(name);
     if (name == 'line') {
+        sessionStorage.setItem('lineTime', 'min,1');
+        sessionStorage.setItem('st', stTime);
+        sessionStorage.setItem('et', etTime);
         ChartManager.getInstance().getChart().strIsLine = true;
         ChartManager.getInstance().setChartStyle('frame0.k0', 'Line');
         ChartManager.getInstance().getChart().setCurrentPeriod('line');

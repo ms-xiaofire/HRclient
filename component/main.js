@@ -32,43 +32,50 @@ if(lineTime === null) {
 $('#kline_container').on('click', 'div div div ul li a', function () {
     var time = $(this).text();
     if(time === '1分钟' || time === '1m') {
-        sessionStorage.clear();
+        sessionStorage.removeItem('st');
+        sessionStorage.removeItem('et');
         sessionStorage.setItem('lineTime', 'min,1');
         window.location.reload();
     }
     if(time === '5分钟' || time === '5m') {
-        sessionStorage.clear();
+        sessionStorage.removeItem('st');
+        sessionStorage.removeItem('et');
         sessionStorage.setItem('lineTime', 'min,5');
         window.location.reload();
     }
     if(time === '10分钟' || time === '10m') {
         sessionStorage.setItem('lineTime', 'min,10');
-        sessionStorage.clear('st');
-        sessionStorage.clear('et');
+        sessionStorage.removeItem('st');
+        sessionStorage.removeItem('et');
         window.location.reload();
     }
     if(time === '15分钟' || time === '15m') {
-        sessionStorage.clear();
+        sessionStorage.removeItem('st');
+        sessionStorage.removeItem('et');
         sessionStorage.setItem('lineTime', 'min,15');
         window.location.reload();
     }
     if(time === '30分钟' || time === '30m') {
-        sessionStorage.clear();
+        sessionStorage.removeItem('st');
+        sessionStorage.removeItem('et');
         sessionStorage.setItem('lineTime', 'min,30');
         window.location.reload();
     }
     if(time === '1小时' || time === '1小時' || time === '1h') {
-        sessionStorage.clear();
+        sessionStorage.removeItem('st');
+        sessionStorage.removeItem('et');
         sessionStorage.setItem('lineTime', 'min,60');
         window.location.reload();
     }
     if(time === '2小时' || time === '2小時' || time === '2h') {
-        sessionStorage.clear();
+        sessionStorage.removeItem('st');
+        sessionStorage.removeItem('et');
         sessionStorage.setItem('lineTime', 'min,120');
         window.location.reload();
     }
     if(time === '日线' || time === '日線' || time === '1d') {
-        sessionStorage.clear();
+        sessionStorage.removeItem('st');
+        sessionStorage.removeItem('et');
         sessionStorage.setItem('lineTime', 'day');
         window.location.reload();
     }
@@ -119,9 +126,9 @@ var kline = new Kline({
     symbol: "coin5/coin4",
     symbolName: "COIN5_COIN4",
     type: "poll", // poll/stomp
-    url: "http://dt.jctytech.com/stock.php?u=jurunjob&type=kline&num=2000" + '&line='+ lineTime + '&symbol=' + symbol1 + st + et,
+    url: "http://dt.jctytech.com/stock.php?u=test&type=kline&num=2000" + '&line='+ lineTime + '&symbol=' + symbol1 + st + et,
     limit: 1000,
-    intervalTime: 5000,
+    intervalTime: 5000000,
     debug: false,
     showTrade: true,
     reverseColor: false
@@ -177,7 +184,7 @@ function newDate() {
         $('#penBV1').text(data[0].BV1);
     });
 }
-setInterval(newDate, 1000);
+setInterval(newDate, 30000000);
 
 
 //取消默认的浏览器自带右键 很重要！
