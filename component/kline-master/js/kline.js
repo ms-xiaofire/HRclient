@@ -5855,6 +5855,7 @@ CandlestickPlotter.prototype.Draw = function (context) {
         left += cW;
         center += cW;
     }
+    //烛台，stroke为阴线，fill为阳线
     if (strokePosRects.length > 0) {
         context.strokeStyle = theme.getColor(Theme.Color.Positive);
         Plotter.createRectangles(context, strokePosRects);
