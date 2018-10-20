@@ -128,7 +128,7 @@ var kline = new Kline({
     type: "poll", // poll/stomp
     url: "http://dt.jctytech.com/stock.php?u=test&type=kline&num=2000" + '&line='+ lineTime + '&symbol=' + symbol1 + st + et,
     limit: 1000,
-    intervalTime: 5000000,
+    intervalTime: 50000000,
     debug: false,
     showTrade: true,
     reverseColor: false

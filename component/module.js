@@ -153,9 +153,15 @@ $('.timeClose').click(function () {
     window.location.reload();
 });
 //显示底部
-$('#deals').click(function () {
+function show_footer() {
     localStorage.setItem('footers', 1);
     window.location.reload();
+}
+$('#deals').click(function () {
+    show_footer();
+});
+$('#masterDeal').click(function () {
+    show_footer();
 });
 
 
@@ -414,7 +420,7 @@ $(document).keydown(function (e) {
     e = window.event;
     let keycode = e.which ? e.which : e.keyCode;
     if(keycode === 123) {
-        console.log('F12');
+        show_footer();
     }
 });
 

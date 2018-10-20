@@ -2839,6 +2839,8 @@ MainArea.prototype.onMouseMove = function (x, y) {
     return this;
 };
 MainArea.prototype.onMouseLeave = function (x, y) {
+    console.log(x);
+    console.log(y);
     this._dragStarted = false;
     this._passMoveEventToToolManager = true;
 };
@@ -9284,6 +9286,7 @@ function requestOverHttp() {
                     },
                     "success": true
                 };
+                console.log(data0);
                 if (KlineIns.G_HTTP_REQUEST) {
                     requestSuccessHandler(data0);
                 }
